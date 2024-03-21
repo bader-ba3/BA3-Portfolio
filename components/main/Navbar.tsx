@@ -19,7 +19,7 @@ const Navbar = () => {
                         height={40}
                         className="cursor-pointer hover:animate-slowspin"
                     />
-                    <span className="w-[120px] font-bold ml-[10px] hidden md:block text-gray-300">
+                    <span className="w-[120px] font-bold ml-[10px] text-gray-300">
                         BA3
                     </span>
                 </a>
