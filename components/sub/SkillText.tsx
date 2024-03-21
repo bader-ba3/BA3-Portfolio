@@ -39,7 +39,7 @@ const SkillText = () => {
             <motion.a
                 href="https://wa.me/+971562064458"
                 target="_blank"
-                style={{ zIndex: 1 }}
+                style={{ zIndex: 2 }}
                     className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold ">
                     DIVING IN OUR SPACE!
                 </motion.a>
