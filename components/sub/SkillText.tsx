@@ -6,7 +6,7 @@ import {SparklesIcon} from '@heroicons/react/24/solid'
 
 const SkillText = () => {
     return (
-        <div className='w-full h-auto flex flex-col items-center justify-center'>
+        <div className='w-full h-auto flex flex-col items-center justify-center z-[30] '>
             <motion.div
                 variants={slideInFromTop}
                 className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
@@ -35,14 +35,14 @@ const SkillText = () => {
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
         
-            
-            <a
+    
+            <motion.a
                 href="https://wa.me/+971562064458"
                 target="_blank"
-            
-                    className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold">
+                style={{ zIndex: 1 }}
+                    className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold ">
                     DIVING IN OUR SPACE!
-                </a>
+                </motion.a>
         </div>
     )
 }
