@@ -5,6 +5,8 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
+import MouseContextProvider from "../context/mouse-context";
+import React from 'react';
 
 
 
@@ -25,11 +27,14 @@ export default function RootLayout({
         <html lang="en">
         <body
             className={` bg-[#030014] overflow-y-scroll overflow-x-hidden`}
-        >
+        >  <React.StrictMode>
+        <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/>
         {children}
         <Footer/>
+        </MouseContextProvider>
+        </React.StrictMode>
         </body>
         </html>
     );

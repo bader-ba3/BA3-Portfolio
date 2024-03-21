@@ -1,10 +1,15 @@
 "use client"
-import React from 'react'
+import { useContext } from "react";
+
+import React  from 'react'
 import {motion} from 'framer-motion'
 import {slideInFromLeft, slideInFromRight, slideInFromTop} from '@/utils/motion'
 import {SparklesIcon} from '@heroicons/react/24/solid'
+import { MouseContext } from "@/context/mouse-context";
 
 const SkillText = () => {
+    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
     return (
         <div className='w-full h-auto flex flex-col items-center justify-center z-[30] '>
             <motion.div
@@ -35,14 +40,19 @@ const SkillText = () => {
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
         
-    
-            <motion.a
+            <div
+                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                onMouseLeave={() => cursorChangeHandler("cursor")}
+                className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold z-[30]">
+                <motion.a
                 href="https://wa.me/+971562064458"
                 target="_blank"
-                style={{ zIndex: 2 }}
-                    className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold ">
-                    DIVING IN OUR SPACE!
+                    variants={slideInFromLeft(1)}
+                    >
+                     DIVING IN OUR SPACE!
                 </motion.a>
+            </div>
+        
         </div>
     )
 }

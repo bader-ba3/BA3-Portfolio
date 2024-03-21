@@ -1,4 +1,5 @@
 "use client";
+import { useContext } from "react";
 
 import React from "react";
 import {motion} from "framer-motion";
@@ -9,8 +10,10 @@ import {
 } from "@/utils/motion";
 import {SparklesIcon} from "@heroicons/react/24/solid";
 import Image from "next/image";
-
+import { MouseContext } from "@/context/mouse-context";
 const HeroContent = () => {
+    const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+
     return (
         <motion.div
             initial="hidden"
@@ -27,7 +30,6 @@ const HeroContent = () => {
                        Easiest way to Build Applications
                     </h1>
                 </motion.div>
-
                 <motion.div
                     variants={slideInFromLeft(0.5)}
                     className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
@@ -42,21 +44,25 @@ const HeroContent = () => {
                     </span>
 
                 </motion.div>
-
                 <motion.p
                     variants={slideInFromLeft(0.8)}
                     className="text-lg text-gray-400 my-5 max-w-[600px]"
                 >
                     Empowering businesses with innovative solutions, we specialize in mobile app and web development, ensuring seamless user experiences. Our cybersecurity services protect your digital assets, while our engaging videos educate users on secure practices.
                 </motion.p>
-              
+
+                <div
+                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                onMouseLeave={() => cursorChangeHandler("cursor")}
+                className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]">
                 <motion.a
                 href="https://wa.me/+971562064458"
                 target="_blank"
                     variants={slideInFromLeft(1)}
-                    className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]">
+                    >
                     Diving in our Space!
                 </motion.a>
+            </div>
             </div>
             <motion.div
                 variants={slideInFromRight(0.8)}
