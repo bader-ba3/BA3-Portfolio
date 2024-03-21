@@ -40,18 +40,18 @@ const SkillText = () => {
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
         
-            <div
-                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-                onMouseLeave={() => cursorChangeHandler("cursor")}
-                className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold z-[30]">
+        
                 <motion.a
+                  onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                  onMouseLeave={() => cursorChangeHandler("cursor")}
+                  className="text-[30px] py-10 px-[6%] button-primary text-center  text-white cursor-pointer rounded-lg w-[100hv] h-[70hv] font-bold z-[30]"
                 href="https://wa.me/+971562064458"
                 target="_blank"
                     variants={slideInFromLeft(1)}
                     >
                      DIVING IN OUR SPACE!
                 </motion.a>
-            </div>
+        
         
         </div>
     )

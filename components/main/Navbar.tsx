@@ -35,8 +35,8 @@ const Navbar = () => {
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#skills" className="cursor-pointer">
-                            Skills
+                        href="#our-space" className="cursor-pointer">
+                            Our Space
                         </a>
                         <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}

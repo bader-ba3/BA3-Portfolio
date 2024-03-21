@@ -51,18 +51,18 @@ const HeroContent = () => {
                     Empowering businesses with innovative solutions, we specialize in mobile app and web development, ensuring seamless user experiences. Our cybersecurity services protect your digital assets, while our engaging videos educate users on secure practices.
                 </motion.p>
 
-                <div
-                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-                onMouseLeave={() => cursorChangeHandler("cursor")}
-                className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]">
+              
                 <motion.a
+                  onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                  onMouseLeave={() => cursorChangeHandler("cursor")}
+                  className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]"
                 href="https://wa.me/+971562064458"
                 target="_blank"
                     variants={slideInFromLeft(1)}
                     >
                     Diving in our Space!
                 </motion.a>
-            </div>
+          
             </div>
             <motion.div
                 variants={slideInFromRight(0.8)}

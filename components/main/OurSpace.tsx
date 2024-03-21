@@ -7,20 +7,23 @@ import {
 } from "@/constants";
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
-import SkillText from "../sub/SkillText";
+import SkillText from "../sub/OurSpaceText";
 import {slideInFromLeft,
     slideInFromRight,slideInFromTop} from "@/utils/motion";
 import {motion} from "framer-motion";
 
-const Skills = () => {
+const OurSpace = () => {
     return (
         <div
-            id="skills"
+            id="our-space"
             className="flex flex-col items-center justify-center gap-3  h-full relative overflow-hidden pb-80 py-20 inset-0 z-[20]"
             style={{transform: "scale(0.9"}}
-        >
+        > 
+        <div className="mb-[25vh] text-[15px] text-center">
+                
+        </div>
             <div className=" w-full h-full flex  justify-center top-0 z-[5]">
-        
+           
             <motion.div
                     variants={slideInFromTop}
                     className="text-[40px] font-medium text-center text-gray-200"
@@ -30,6 +33,7 @@ const Skills = () => {
                     </span>
                 </motion.div>
              </div>
+             
             <SkillText/>
             <div className="w-full h-full absolute">
                 <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
@@ -49,4 +53,4 @@ const Skills = () => {
     );
 };
 
-export default Skills;
+export default OurSpace;
