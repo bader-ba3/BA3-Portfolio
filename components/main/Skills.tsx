@@ -8,73 +8,29 @@ import {
 import React from "react";
 import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/SkillText";
+import {slideInFromLeft,
+    slideInFromRight,slideInFromTop} from "@/utils/motion";
+import {motion} from "framer-motion";
 
 const Skills = () => {
     return (
         <div
             id="skills"
-            className=" flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-80 py-20 inset-0 z-[20]"
+            className="flex flex-col items-center justify-center gap-3  h-full relative overflow-hidden pb-80 py-20 inset-0 z-[20]"
             style={{transform: "scale(0.9"}}
         >
-           
-
-            {/* <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-                {Skill_data.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-
-            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-                {Frontend_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-                {Backend_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-                {Full_stack.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">
-                {Other_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-*/}
+            <div className=" w-full h-full flex  justify-center top-0 z-[5]">
+        
+            <motion.div
+                    variants={slideInFromTop}
+                    className="text-[40px] font-medium text-center text-gray-200"
+                >
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
+                       Our Space
+                    </span>
+                </motion.div>
+             </div>
+            <SkillText/>
             <div className="w-full h-full absolute">
                 <div className="w-full h-full z-[-10] opacity-30 absolute flex items-center justify-center bg-cover">
                     <video
@@ -88,7 +44,7 @@ const Skills = () => {
                     />
                 </div>
             </div> 
-            <SkillText/>
+
         </div>
     );
 };
