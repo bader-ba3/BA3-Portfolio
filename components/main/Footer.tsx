@@ -20,49 +20,87 @@ const Footer = () => {
                 <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <FaYoutube/>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <FaYoutube/>
                             <span className="text-[15px] ml-[6px]">Youtube</span>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <RxGithubLogo/>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <RxGithubLogo/>
                             <span className="text-[15px] ml-[6px]">Github</span>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <RxDiscordLogo/>
-                            <span className="text-[15px] ml-[6px]">Discord</span>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <RxDiscordLogo/>
+                            <span className="text-[15px] ml-[6px]">Descord</span>
+                            </a>
                         </p>
                     </div>
+
+
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Social Media</div>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <FaYoutube/>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <FaYoutube/>
                             <span className="text-[15px] ml-[6px]">Instagram</span>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <RxGithubLogo/>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <RxGithubLogo/>
                             <span className="text-[15px] ml-[6px]">Twitter</span>
+                            </a>
                         </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-                            <RxDiscordLogo/>
+                        <p 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer hover:text-purple-500 z-[20]">
+                        <a href="" className="flex flex-row items-center ml-[6px] hover:text-purple-500 ">
+                        <RxDiscordLogo/>
                             <span className="text-[15px] ml-[6px]">Linkedin</span>
+                            </a>
                         </p>
                     </div>
+
+
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">About</div>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-
-                            <span className="text-[15px] ml-[6px]">Become Sponsor</span>
-                        </p>
-                        <p className="flex flex-row items-center my-[15px] cursor-pointer">
-
-                            <span className="text-[15px] ml-[6px]">Learning about me</span>
+                        <p 
+                           onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                           onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer z-[20] ">
+                            <a href="" className="text-[15px] ml-[6px] hover:text-purple-500 ">Become Sponsor</a>
                         </p>
                         <p 
                            onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                            onMouseLeave={() => cursorChangeHandler("cursor")}
-                        className="flex flex-row items-center my-[15px] cursor-pointer z-[20]">
-                            <a href="mailto:hello@ba3.co" className="text-[15px] ml-[6px] ">hello@ba3.co</a>
+                        className="flex flex-row items-center my-[15px] cursor-pointer z-[20] ">
+                            <a href="" className="text-[15px] ml-[6px] hover:text-purple-500 ">Learning about me</a>
+                        </p>
+                        <p 
+                           onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                           onMouseLeave={() => cursorChangeHandler("cursor")}
+                        className="flex flex-row items-center my-[15px] cursor-pointer z-[20] ">
+                            <a href="mailto:hello@ba3.co" className="text-[15px] ml-[6px] hover:text-purple-500 ">hello@ba3.co</a>
                         </p>
                     </div>
                 </div>
@@ -73,7 +111,7 @@ const Footer = () => {
                     &copy;  Copyright 2024, All Rights Reserved.
                 </div>
                 <div className="mb-[20px] text-[15px] text-center">
-                     Made with Loving by BA3.
+                     Made with Love by BA3.co
                 </div>
             </div>
         </div>
