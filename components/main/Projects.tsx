@@ -42,17 +42,17 @@ const Projects = () => {
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/taxi_banner.png"
                     title="Ba3 Taxi"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/delevery_banner.png"
                     title="Ba3 Delevery"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                    <ProjectCard
-                     src="/edit2.png"
+                     src="/car_banner.png"
                     title="Ba3 Car"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
@@ -62,23 +62,23 @@ const Projects = () => {
 
             <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
                 <ProjectCard
-                    src="/edit2.png"
+                    src="/resturant_banner.jpeg"
                     title="Ba3 Restorant"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
                      src="/edit2.png"
-                    title="Ba3 Chat"
+                    title="Ba3 Chat "
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/school_banner.png"
                     title="Ba3 School"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
-                    title="Ba3 Booking"
+                     src="/airline_banner.png"
+                    title="Ba3 Airline"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 /> 
             </div>
