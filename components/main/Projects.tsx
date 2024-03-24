@@ -21,16 +21,17 @@ const Projects = () => {
                     title="Ba3 Business Solution"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
+                 <ProjectCard
+                    src="/resturant_banner.jpeg"
+                    title="Ba3 Restaurant"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                />
                 <ProjectCard
-                     src="/clicn_banner.png"
-                    title="Ba3 Clinc"
+                     src="/chat_banner.jpeg"
+                    title="Ba3 Chata "
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
-                   <ProjectCard
-                     src="/trade_banner.png"
-                    title="Ba3 Trading"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                />
+               
             </div>
 
             <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
@@ -61,16 +62,17 @@ const Projects = () => {
             <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
 
             <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
-                <ProjectCard
-                    src="/resturant_banner.jpeg"
-                    title="Ba3 Restaurant"
+            <ProjectCard
+                     src="/clicn_banner.png"
+                    title="Ba3 Clinc"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
-                <ProjectCard
-                     src="/chat_banner.jpeg"
-                    title="Ba3 Chata "
+                   <ProjectCard
+                     src="/trade_banner.png"
+                    title="Ba3 Trading"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
+
                 <ProjectCard
                      src="/school_banner.png"
                     title="Ba3 School"
