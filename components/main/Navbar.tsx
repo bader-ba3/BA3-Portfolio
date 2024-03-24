@@ -25,23 +25,23 @@ const Navbar = () => {
                 </a>
 
                 <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
-                    <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200">
+                    <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 ">
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#about-me" className="cursor-pointer">
+                        href="#about-me" className="cursor-pointer hover:text-purple-500">
                             About us
                         </a>
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#our-space" className="cursor-pointer">
+                        href="#our-space" className="cursor-pointer hover:text-purple-500">
                             Our Space
                         </a>
                         <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#projects" className="cursor-pointer">
+                        href="#projects" className="cursor-pointer hover:text-purple-500">
                             Projects
                         </a>
                     </div>
@@ -52,7 +52,7 @@ const Navbar = () => {
                         <a 
                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                         onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href={social.link} className="cursor-pointer" target="_blank" key={social.name}>
+                        href={social.link} className="cursor-pointer px-[5px] " target="_blank" key={social.name}>
                             <Image
                                 src={social.src}
                                 alt={social.name}
