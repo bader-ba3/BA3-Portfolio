@@ -1,42 +1,3 @@
-export const Skill_data = [
-    {
-        skill_name: "npm",
-        Image: "/npm.png",
-        width: 55,
-        height: 55,
-    },
-    {
-        skill_name: "Swagger",
-        Image: "/swagger.png",
-        width: 55,
-        height: 55,
-    },
-    {
-        skill_name: "vite",
-        Image: "/vite.png",
-        width: 55,
-        height: 55,
-    },
-    {
-        skill_name: "Framer Motion",
-        Image: "/framer.png",
-        width: 50,
-        height: 50,
-    },
-    {
-        skill_name: "my SQL",
-        Image: "/mysql.png",
-        width: 55,
-        height: 55,
-    },
-    {
-        skill_name: "GraphQL",
-        Image: "/graphql.png",
-        width: 55,
-        height: 55,
-    },
-];
-
 export const Socials = [
     {
         name: "LinkedIn",
@@ -46,7 +7,7 @@ export const Socials = [
     {
         name: "github",
         src: "/github.svg",
-        link: "https://github.com/"
+        link: "https://github.com/ba3co"
     },
     {
         name: "Facebook",
@@ -57,7 +18,15 @@ export const Socials = [
         name: "Instagram",
         src: "/instagram.svg",
         link: "https://www.instagram.com/ba3.co/"
-    },
+    }, {
+        name: "YouTube",
+        src: "/youtube.png",
+        link: "https://www.youtube.com/@ba3-co"
+    }, {
+        name: "X",
+        src: "/x.png",
+        link: "https://twitter.com/ba3_co_"
+    }
 ];
 
 
