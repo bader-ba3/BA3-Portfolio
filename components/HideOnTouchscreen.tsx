@@ -35,7 +35,7 @@ const HideOnTouchscreen = () => {
       
       }
 
-    const [isTouchscreen, setIsTouchscreen] = useState(false);
+    const [isTouchscreen, setIsTouchscreen] = useState(true);
 
     useEffect(() => {
         const checkTouchscreen = () => {
