@@ -17,17 +17,17 @@ const Projects = () => {
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/abc.jpeg"
                     title="Ba3 Busniss solution"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/clicn_banner.png"
                     title="Ba3 Clinc"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
                    <ProjectCard
-                     src="/edit2.png"
+                     src="/trade_banner.png"
                     title="Ba3 Trading"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
@@ -37,7 +37,7 @@ const Projects = () => {
 
             <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
                 <ProjectCard
-                     src="/edit2.png"
+                     src="/tiktok_banner.jpeg"
                     title="Ba3 TikTok"
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
                 />
