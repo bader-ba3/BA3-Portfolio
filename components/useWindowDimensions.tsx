@@ -15,5 +15,5 @@ export default function useWindowDimensions() {
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
 
-  return hasWindow ?[height, width]:[0,0];
+  return {height, width,updateDimensions}
 }

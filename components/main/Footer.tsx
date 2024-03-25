@@ -14,17 +14,17 @@ import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
 
 const Footer = () => {
-    const size = useWindowDimensions();
+    const {height, width,updateDimensions} = useWindowDimensions();
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
-
+    updateDimensions;
     return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[20] ">
             <div className="w-full flex flex-col items-center justify-center m-auto">
               <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
-              className="w-[100vh] h-[200px] z-[99] items-center justify-center"  style={{scale: size[1]*0.0013}} >
-              <Spline scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode" />
+              className="w-[100vh] h-[200px] z-[99] items-center justify-center"  style={{scale:width*0.001}} >
+              <Spline  className=" z-[99]" scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode" />
               </div>
                 {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
