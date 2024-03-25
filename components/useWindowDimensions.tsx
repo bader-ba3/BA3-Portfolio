@@ -11,9 +11,13 @@ export default function useWindowDimensions() {
         setHeight(window.innerHeight);
     }
     useEffect(() => {
+        console.log("effect")
+        console.log(window.innerWidth)
+        setWidth(1130);
+        setHeight(window.innerHeight);
         window.addEventListener("resize", updateDimensions);
         return () => window.removeEventListener("resize", updateDimensions);
     }, []);
 
-  return {height, width,updateDimensions}
+  return {height, width}
 }
