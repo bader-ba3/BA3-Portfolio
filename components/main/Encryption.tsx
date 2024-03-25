@@ -53,7 +53,8 @@ const Encryption = () => {
                     playsInline
                     html5-video="true"
                     preload="false"
-                    className="abcd muted w-auto h-auto "
+                    
+                    className="abcd muted='true' w-auto h-auto volume='0"
                     src="/encryption.webm/"
                 />
             </div>
