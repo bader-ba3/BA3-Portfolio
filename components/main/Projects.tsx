@@ -28,7 +28,7 @@ const Projects = () => {
                 />
                 <ProjectCard
                      src="/chat_banner.jpeg"
-                    title="Ba3 Chata "
+                    title="Ba3 Chat "
                     description="Our chat app offers easy communication with voice and video calls. Stay connected, manage contacts, and enjoy privacy with encrypted messages. Download for seamless communication."
                 />
                
@@ -49,7 +49,7 @@ const Projects = () => {
                 />
                 <ProjectCard
                      src="/delevery_banner.png"
-                    title="Ba3 Delevery"
+                    title="Ba3 Delivery"
                     description="Our food delivery app offers a variety of cuisines delivered to your doorstep. place orders, and track deliveries for a convenient dining experience."
                 />
                    <ProjectCard

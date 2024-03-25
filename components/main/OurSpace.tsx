@@ -43,7 +43,7 @@ const OurSpace = () => {
                         loop
                         muted
                         autoPlay
-                        src="/cards-video.webm"
+                        src="/cards-video.mp4"
                     />
                 </div>
             </div> 
