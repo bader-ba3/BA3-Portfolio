@@ -10,6 +10,7 @@ import {
 
 import {FaYoutube} from "react-icons/fa";
 import { MouseContext } from "@/context/mouse-context";
+import Spline from '@splinetool/react-spline';
 
 const Footer = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
@@ -17,7 +18,10 @@ const Footer = () => {
     return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[20] ">
             <div className="w-full flex flex-col items-center justify-center m-auto">
-                <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
+                <div className=" w-full h-[200px] z-[99] ">
+                <Spline className=" w-[50px] h-[50px] z-[99] "scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode" />
+                </div>
+                {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
                         <p 
@@ -106,7 +110,7 @@ const Footer = () => {
                 </div>
                 <div className="mb-[20px] text-[15px] text-center">
                 
-                </div>
+                </div> */}
                 <div className="mb-[20px] text-[15px] text-center">
                     &copy;  Copyright 2024, All Rights Reserved.
                 </div>

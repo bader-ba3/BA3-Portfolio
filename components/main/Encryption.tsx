@@ -45,14 +45,15 @@ const Encryption = () => {
             </div>
         
 
-            <div className="background-video-hosted w-full flex items-start justify-center absolute   px-[20px]">
+            <div className=" w-full flex items-start justify-center absolute   px-[20px]">
                 <video
                     loop
                     muted
                     autoPlay
                     playsInline
+                    html5-video="true"
                     preload="false"
-                    className="w-auto h-auto"
+                    className="abcd w-auto h-auto "
                     src="/encryption.webm/"
                 />
             </div>
