@@ -7,19 +7,23 @@ import {
     RxTwitterLogo,
     RxLinkedinLogo,
 } from "react-icons/rx";
+import useWindowDimensions from '../useWindowDimensions';
 
 import {FaYoutube} from "react-icons/fa";
 import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
 
 const Footer = () => {
-
+    const size = useWindowDimensions();
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
 
     return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-[15px] z-[20] ">
             <div className="w-full flex flex-col items-center justify-center m-auto">
-              <div className="w-[100vh] h-[200px] z-[99] items-center justify-center"  style={{scale:"75%" }} >
+              <div 
+               onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+               onMouseLeave={() => cursorChangeHandler("cursor")}
+              className="w-[100vh] h-[200px] z-[99] items-center justify-center"  style={{scale: size[1]*0.0013}} >
               <Spline scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode" />
               </div>
                 {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
