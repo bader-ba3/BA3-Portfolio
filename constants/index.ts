@@ -18,15 +18,16 @@ export const Socials = [
         name: "Instagram",
         src: "/instagram.svg",
         link: "https://www.instagram.com/ba3.co/"
-    }, {
-        name: "YouTube",
-        src: "/youtube.png",
-        link: "https://www.youtube.com/@ba3-co"
-    }, {
-        name: "X",
-        src: "/x.png",
-        link: "https://twitter.com/ba3_co_"
-    }
+    },
+    //  {
+    //     name: "YouTube",
+    //     src: "/youtube.png",
+    //     link: "https://www.youtube.com/@ba3-co"
+    // }, {
+    //     name: "X",
+    //     src: "/x.png",
+    //     link: "https://twitter.com/ba3_co_"
+    // }
 ];
 
 
