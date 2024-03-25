@@ -45,7 +45,7 @@ const Encryption = () => {
             </div>
         
 
-            <div className=" w-full flex items-start justify-center absolute muted  px-[20px]">
+            {/* <div className=" w-full flex items-start justify-center absolute muted  px-[20px]">
                 <video
                     loop
                     muted
@@ -54,8 +54,20 @@ const Encryption = () => {
                     html5-video="true"
                     preload="false"
                     
-                    className="abcd muted='true' w-auto h-auto volume='0"
+                    className="abcd muted='true' w-auto h-auto volume='0'"
                     src="/encryption.webm/"
+                />
+            </div> */}
+
+            <div className=" w-full flex items-start justify-center absolute muted  px-[20px]">
+                <video
+                    autoPlay={true} 
+                    loop={true}
+                    controls={false} 
+                    playsInline
+                    muted 
+                    src="/encryption (2).mp4/"
+                    className="abcd muted='true' w-auto h-auto volume='0'"
                 />
             </div>
         </div>
