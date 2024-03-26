@@ -7,6 +7,7 @@ import Projects from "@/components/main/Projects";
 import OurSpace from "@/components/main/OurSpace";
 
 export default function Home() {
+   
     return (
         <main className="h-full w-full">
             <div className="flex flex-col gap-20">
