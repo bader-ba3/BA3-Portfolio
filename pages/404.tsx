@@ -31,10 +31,8 @@ const Page404 = () => {
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[20] ">
-            <div className="w-full flex flex-col items-center justify-center m-auto">
+        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[99] ">
             <Spline   scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode"   />
-            </div>
         </div>
         <HideOnTouchscreen />
        </MouseContextProvider>

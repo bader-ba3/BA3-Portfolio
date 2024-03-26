@@ -5,7 +5,6 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
-import Page404 from "@/components/main/Page404";
 import MouseContextProvider from "../context/mouse-context";
 import React from 'react';
 import Head from 'next/head';
@@ -49,15 +48,6 @@ export default function RootLayout({
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        {/* <Router>
-               <Routes>
-                <Route path="/" element={children} />
-                <Route
-                    path="*"
-                    element={<Page404 />}
-                />
-            </Routes>
-        </Router> */}
         {children}
         <HideOnTouchscreen />
        </MouseContextProvider>
