@@ -2,7 +2,10 @@
 import React,{useContext,useState,useEffect} from "react";
 import Spline from '@splinetool/react-spline';
 import Head from 'next/head';
-
+import Navbar from "@/components/main/Navbar";
+import MouseContextProvider from "../context/mouse-context";
+import StarsCanvas from "@/components/main/StarBackground";
+import HideOnTouchscreen from "@/components/HideOnTouchscreen";
 
 const Page404 = () => {
 
