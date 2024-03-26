@@ -1,24 +1,30 @@
+'use client';
 
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
-import Footer from "@/components/main/Footer";
+import Page404 from "@/components/main/Page404";
 import MouseContextProvider from "../context/mouse-context";
 import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
-
+import HideOnTouchscreen from "@/components/HideOnTouchscreen";
+import {
+    Route,
+    Routes,
+    BrowserRouter as Router,
+} from "react-router-dom";
 
 
 const inter = Inter({subsets: ["latin"]});
 
-export const metadata: Metadata = {
-    title: "BA3",
-    description: "BA3 Portfolio",
+// export const metadata: Metadata = {
+//     title: "BA3",
+//     description: "BA3 Portfolio",
     
-};
+// };
 
 export default function RootLayout({
                                        children,
@@ -46,8 +52,16 @@ export default function RootLayout({
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        {children}
-         <Footer/>
+        <Router>
+               <Routes>
+                <Route path="/" element={children} />
+                <Route
+                    path="*"
+                    element={<Page404 />}
+                />
+            </Routes>
+        </Router>
+        <HideOnTouchscreen />
        </MouseContextProvider>
         </React.StrictMode> 
         </body>

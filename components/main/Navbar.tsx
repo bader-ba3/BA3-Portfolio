@@ -6,6 +6,7 @@ import { MouseContext } from "@/context/mouse-context";
 
 const Navbar = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const hasWindow = typeof window !== 'undefined';
 
     return (
         <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
@@ -28,19 +29,19 @@ const Navbar = () => {
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#about-me" className="cursor-pointer hover:text-purple-500">
+                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#about-me":"#about-me"} className="cursor-pointer hover:text-purple-500">
                             About us
                         </a>
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#our-space" className="cursor-pointer hover:text-purple-500">
+                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#our-space":"#our-space"} className="cursor-pointer hover:text-purple-500">
                             Our Space
                         </a>
                         <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href="#projects" className="cursor-pointer hover:text-purple-500">
+                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#projects":"#projects"} className="cursor-pointer hover:text-purple-500">
                             Projects
                         </a>
                     </div>

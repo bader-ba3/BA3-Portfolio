@@ -2,8 +2,8 @@
 
 import Encryption from "@/components/main/Encryption";
 import Hero from "@/components/main/Hero";
+import Footer from "@/components/main/Footer";
 import Projects from "@/components/main/Projects";
-import HideOnTouchscreen from "@/components/HideOnTouchscreen";
 import OurSpace from "@/components/main/OurSpace";
 
 export default function Home() {
@@ -14,8 +14,8 @@ export default function Home() {
                 <OurSpace/>
                 <Encryption/>
                 <Projects/>
+                <Footer/>
             </div>
-            <HideOnTouchscreen />
            
         </main>
     );

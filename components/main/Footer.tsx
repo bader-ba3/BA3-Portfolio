@@ -1,5 +1,6 @@
 "use client";
 import React,{useContext,useState,useEffect} from "react";
+
 import {
     RxDiscordLogo,
     RxGithubLogo,
@@ -31,7 +32,17 @@ const Footer = () => {
               className="w-auto h-[200px] z-[99] items-center justify-center" style={{scale:size *0.0015}} >
               <Spline   scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
               </div>
+            
               <span className="text-[15px] ml-[6px]">{size}</span>
+              <div className="mb-[70px] text-[15px] text-center">
+                  
+                </div>
+              <div className="mb-[20px] text-[15px] text-center">
+                    &copy;  Copyright 2024, All Rights Reserved.
+                </div>
+                <div className="mb-[20px] text-[15px] text-center">
+                     Made with 💜 by BA3.co
+                </div>
                 {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
@@ -125,12 +136,7 @@ const Footer = () => {
                 {/* <div className="mb-[20px] text-[0px] text-center">
                    {width}
                 </div> */}
-                <div className="mb-[20px] text-[15px] text-center">
-                    &copy;  Copyright 2024, All Rights Reserved.
-                </div>
-                <div className="mb-[20px] text-[15px] text-center">
-                     Made with 💜 by BA3.co
-                </div>
+                
             </div>
         </div>
     )
