@@ -11,11 +11,7 @@ import React from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
-import {
-    Route,
-    Routes,
-    BrowserRouter as Router,
-} from "react-router-dom";
+
 
 
 const inter = Inter({subsets: ["latin"]});
@@ -52,7 +48,7 @@ export default function RootLayout({
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        <Router>
+        {/* <Router>
                <Routes>
                 <Route path="/" element={children} />
                 <Route
@@ -60,7 +56,8 @@ export default function RootLayout({
                     element={<Page404 />}
                 />
             </Routes>
-        </Router>
+        </Router> */}
+        {children}
         <HideOnTouchscreen />
        </MouseContextProvider>
         </React.StrictMode> 
