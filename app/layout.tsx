@@ -42,14 +42,14 @@ export default function RootLayout({
             className={` bg-[#030014] overflow-y-scroll overflow-x-hidden`}
         >  
        
-        <React.StrictMode>
-        <MouseContextProvider>
+       <React.StrictMode>
+         <MouseContextProvider>
         <StarsCanvas/>
-        <Navbar/>
+        <Navbar/> 
         {children}
-        <Footer/>
-        </MouseContextProvider>
-        </React.StrictMode>
+         <Footer/>
+       </MouseContextProvider>
+        </React.StrictMode> 
         </body>
     
         </html>

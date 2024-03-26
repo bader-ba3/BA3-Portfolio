@@ -18,8 +18,8 @@ const HeroContent = () => {
         <motion.div
             initial="hidden"
             animate="visible"
-            className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36"
-        >
+            // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
+            className="flex flex-col items-center justify-center px-20  mt-20 w-full z-[20] xl:flex-row">
             <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start">
                 <motion.div
                     variants={slideInFromTop}
@@ -64,9 +64,10 @@ const HeroContent = () => {
                 </motion.a>
           
             </div>
+
             <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-full h-full flex justify-center items-center"
+                className=" w-full h-full flex justify-center items-center py-20"
             >
                 <Image
                     src="/mainIconsdark.svg"

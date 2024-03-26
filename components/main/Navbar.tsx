@@ -23,11 +23,7 @@ const Navbar = () => {
                         BA3
                     </span>
                 </a> 
-                <div className="hidden md:w-[1px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
-                
-                </div>
-
-                <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
+                      <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 ">
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
@@ -50,7 +46,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="flex flex-row gap-5 items-center justify-between">
+                <div className="flex flex-row gap-4 items-center justify-between">
                     {Socials.map((social) => (
                         <a 
                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
