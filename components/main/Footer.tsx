@@ -12,7 +12,9 @@ import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
 
 const Footer = () => {
-    const [size, setSize] = useState(window.innerWidth);
+        const hasWindow = typeof window !== 'undefined';
+
+    const [size, setSize] = useState(hasWindow?window.innerWidth:9);
     console.log(window.innerHeight, window.innerWidth)
     useEffect(() => {
       window.addEventListener("resize", () => {
