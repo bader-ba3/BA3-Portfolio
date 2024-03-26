@@ -4,12 +4,14 @@ import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
+import page404 from "../pages/404";
 import Navbar from "@/components/main/Navbar";
 import MouseContextProvider from "../context/mouse-context";
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
+import Spline from '@splinetool/react-spline';
 
 
 

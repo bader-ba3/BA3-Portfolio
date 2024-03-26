@@ -10,7 +10,14 @@ import StarsCanvas from "@/components/main/StarBackground";
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
 
 const Page404 = () => {
+    const hasWindow = typeof window !== 'undefined';
 
+    const [size, setSize] = useState(hasWindow?window.innerWidth:300);
+    useEffect(() => {
+      window.addEventListener("resize", () => {
+        setSize(window.innerWidth)
+    });
+    });
       return (
         <html lang="en">
             <Head>
@@ -31,9 +38,18 @@ const Page404 = () => {
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[99] ">
-            <Spline   scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode"   />
-        </div>
+        <main className="h-full w-full">
+        
+        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[0] flex items-center justify-center">
+    <div className="w-full flex flex-col items-center justify-center">
+        <span className="h-[100px] font-bold ml-[10px] text-gray-300"> 
+        </span>
+        <Spline scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode" style={{scale:size *0.0015}}/>
+    </div>
+   
+            </div>
+           
+        </main>
         <HideOnTouchscreen />
        </MouseContextProvider>
         </React.StrictMode> 
