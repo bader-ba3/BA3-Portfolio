@@ -28,7 +28,14 @@ export default function RootLayout({
                                    }: {
     children: React.ReactNode;
 }) {
-   
+    const hasWindow = typeof window !== 'undefined';
+
+    const [size, setSize] = useState(hasWindow?window.innerWidth:300);
+    useEffect(() => {
+      window.addEventListener("resize", () => {
+        setSize(window.innerWidth)
+    });
+    });
     return (
     
         <html lang="en">
@@ -50,7 +57,19 @@ export default function RootLayout({
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        {children}
+        {/* {children} */}
+        
+        
+        <div className="w-full h-[100vh] flex items-center justify-center">
+   
+      
+        <Spline scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode" style={{scale:400 *0.0015}}/>
+       
+    </div>
+   
+         
+           
+       
         <HideOnTouchscreen />
        </MouseContextProvider>
         </React.StrictMode> 
