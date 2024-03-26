@@ -15,7 +15,6 @@ const Footer = () => {
         const hasWindow = typeof window !== 'undefined';
 
     const [size, setSize] = useState(hasWindow?window.innerWidth:9);
-    console.log(window.innerHeight, window.innerWidth)
     useEffect(() => {
       window.addEventListener("resize", () => {
         console.log(window.innerHeight, window.innerWidth)
