@@ -2,7 +2,7 @@
 import React,{useContext,useState,useEffect} from "react";
 import Spline from '@splinetool/react-spline';
 import Head from 'next/head';
-import "./globals.css";
+import "../app/globals.css";
 
 import Navbar from "@/components/main/Navbar";
 import MouseContextProvider from "../context/mouse-context";
