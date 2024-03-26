@@ -1,5 +1,5 @@
 "use client";
-import React,{useContext} from "react";
+import React,{useContext,useState,useEffect} from "react";
 import {
     RxDiscordLogo,
     RxGithubLogo,
@@ -12,7 +12,14 @@ import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
 
 const Footer = () => {
-   
+    const [size, setSize] = useState(window.innerWidth);
+    console.log(window.innerHeight, window.innerWidth)
+    useEffect(() => {
+      window.addEventListener("resize", () => {
+        console.log(window.innerHeight, window.innerWidth)
+        setSize(window.innerWidth)
+    });
+    });
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
       return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[20] ">
@@ -20,9 +27,10 @@ const Footer = () => {
               <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
-              className="w-full h-[200px] z-[99] items-center justify-center" style={{scale:1}} >
+              className="w-full h-[200px] z-[99] items-center justify-center" style={{scale:size *0.001}} >
               <Spline   scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
               </div>
+              <span className="text-[15px] ml-[6px]">{size}</span>
                 {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">
                         <div className="font-bold text-[16px]">Community</div>
