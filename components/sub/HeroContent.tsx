@@ -1,5 +1,5 @@
 "use client";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 import React from "react";
 import {motion} from "framer-motion";
@@ -13,7 +13,7 @@ import Image from "next/image";
 import { MouseContext } from "@/context/mouse-context";
 const HeroContent = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
-
+    // const isTouchscreen = useState(IsTouchscreen);  
     return (
         <motion.div
             initial="hidden"

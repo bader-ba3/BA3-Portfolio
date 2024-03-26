@@ -120,7 +120,7 @@ const Footer = () => {
                     &copy;  Copyright 2024, All Rights Reserved.
                 </div>
                 <div className="mb-[20px] text-[15px] text-center">
-                     Made with Love by BA3.co
+                     Made with 💜 by BA3.co
                 </div>
             </div>
         </div>

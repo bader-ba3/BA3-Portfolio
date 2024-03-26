@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { MouseContext } from "@/context/mouse-context";
 
 const HideOnTouchscreen = () => {
+
+
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
 
     const [mousePosition, setMousePosition] = useState({
@@ -35,25 +37,25 @@ const HideOnTouchscreen = () => {
       
       }
 
-    const [isTouchscreen, setIsTouchscreen] = useState(true);
+      const [isTouchscreen, setIsTouchscreen] = useState(true);
 
-    useEffect(() => {
-        const checkTouchscreen = () => {
-            setIsTouchscreen('ontouchstart' in window || navigator.maxTouchPoints!=0);
-        };
-
-        checkTouchscreen();
-
-        window.addEventListener('touchstart', checkTouchscreen);
-        window.addEventListener('mousedown', checkTouchscreen);
-
-        return () => {
-            window.removeEventListener('touchstart', checkTouchscreen);
-            window.removeEventListener('mousedown', checkTouchscreen);
-        };
-    }, []);
-
+      useEffect(() => {
+          const checkTouchscreen = () => {
+              setIsTouchscreen('ontouchstart' in window || navigator.maxTouchPoints!=0);
+          };
+      
+          checkTouchscreen();
+      
+          window.addEventListener('touchstart', checkTouchscreen);
+          window.addEventListener('mousedown', checkTouchscreen);
+      
+          return () => {
+              window.removeEventListener('touchstart', checkTouchscreen);
+              window.removeEventListener('mousedown', checkTouchscreen);
+          };
+      }, []);
     return (
+      
       <div>
       {!isTouchscreen &&  <motion.img 
         src={cursorType+'.png'}
