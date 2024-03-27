@@ -13,6 +13,7 @@ import {SparklesIcon} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { MouseContext } from "@/context/mouse-context";
 import { EncryptionContext } from "@/context/encryptContext";
+import  encyptionText  from "../../utils/encyptionText";
 
 const HeroContent = () => {
     var isLcked = true
@@ -42,7 +43,7 @@ const HeroContent = () => {
                 >
                     <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5"/>
                     <h1 className="Welcome-text text-[13px]">
-                       Easiest way to Build Applications
+                       {encyptionText("Easiest way to Build Applications")}
                     </h1>
                 </motion.div>
                 <motion.div
@@ -52,13 +53,14 @@ const HeroContent = () => {
                     <span 
                     className=""
                     >
-                        {isEncryption ?"Providing":"aaaaaa"}
+                        {encyptionText("Providing")}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                             {" "}
-                            {isEncryption ?" the best":"aaaaaa"}{" "}
+                        {encyptionText("the best")} {" "}
                         </span>
                         
-                        {isEncryption ?"in security, development and innovation.":"aa aaaaaaaa, aaaaaaaaaaa aaa aaaaaaaaaa"}
+                      
+                        {encyptionText("in security, development and innovation.")}
                     </span>
 
                 </motion.div>
@@ -66,7 +68,7 @@ const HeroContent = () => {
                     variants={slideInFromLeft(0.8)}
                     className="text-lg text-gray-400 my-5 max-w-[600px]"
                 >
-                    Empowering businesses with innovative solutions, we specialize in mobile app and web development, ensuring seamless user experiences. Our cybersecurity services protect your digital assets, while our engaging videos educate users on secure practices.
+                    {encyptionText("Empowering businesses with innovative solutions, we specialize in mobile app and web development, ensuring seamless user experiences. Our cybersecurity services protect your digital assets, while our engaging videos educate users on secure practices.")}
                 </motion.p>
 
               
@@ -78,7 +80,7 @@ const HeroContent = () => {
                 target="_blank"
                     variants={slideInFromLeft(1)}
                     >
-                    Diving in our Space!
+                   {encyptionText(" Diving in our Space!")}
                 </motion.a>
           
             </div>
