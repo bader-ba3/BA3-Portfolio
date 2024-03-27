@@ -9,14 +9,27 @@ import {
     slideInFromTop,
 } from "@/utils/motion";
 import Spline from '@splinetool/react-spline';
-
 import {SparklesIcon} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { MouseContext } from "@/context/mouse-context";
+import { EncryptionContext } from "@/context/encryptContext";
+
 const HeroContent = () => {
+    var isLcked = true
+    const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
+
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     // const isTouchscreen = useState(IsTouchscreen);  
+    function onMouseDown(e: { target: { name: string; }; }) {
+        
+        isLcked=!isLcked
+        console.log(isLcked);
+        encryptionChangeHandler(isLcked)
+        
+      }
     return (
+      
+        
         <motion.div
             initial="hidden"
             animate="visible"
@@ -39,12 +52,13 @@ const HeroContent = () => {
                     <span 
                     className=""
                     >
-                        Providing
+                        {isEncryption ?"Providing":"aaaaaa"}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                             {" "}
-                            the best{" "}
+                            {isEncryption ?" the best":"aaaaaa"}{" "}
                         </span>
-                        in security, development and innovation.
+                        
+                        {isEncryption ?"in security, development and innovation.":"aa aaaaaaaa, aaaaaaaaaaa aaa aaaaaaaaaa"}
                     </span>
 
                 </motion.div>
@@ -74,7 +88,9 @@ const HeroContent = () => {
                 className=" w-full h-full flex justify-center items-center py-20"
             >
               
-                <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}} />
+                <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}} 
+                 onMouseDown={onMouseDown}
+                />
 
 
                 {/* <Image
