@@ -74,7 +74,7 @@ const HeroContent = () => {
                 className=" w-full h-full flex justify-center items-center py-20"
             >
               
-                <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.2"}} />
+                <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}} />
 
 
                 {/* <Image
