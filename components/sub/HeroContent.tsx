@@ -8,6 +8,8 @@ import {
     slideInFromRight,
     slideInFromTop,
 } from "@/utils/motion";
+import Spline from '@splinetool/react-spline';
+
 import {SparklesIcon} from "@heroicons/react/24/solid";
 import Image from "next/image";
 import { MouseContext } from "@/context/mouse-context";
@@ -71,12 +73,16 @@ const HeroContent = () => {
                 variants={slideInFromRight(0.8)}
                 className=" w-full h-full flex justify-center items-center py-20"
             >
-                <Image
+              
+                <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.2"}} />
+
+
+                {/* <Image
                     src="/mainIconsdark.svg"
                     alt="work icons"
                     height={650}
                     width={650}
-                />
+                /> */}
             </motion.div>
         </motion.div>
     );
