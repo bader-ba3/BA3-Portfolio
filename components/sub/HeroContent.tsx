@@ -33,10 +33,19 @@ const HeroContent = () => {
             animate="visible"
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
             className="h-full w-full flex flex-col   px-20   justify-center mt-20 w-full z-[20] xl:flex-row">
-                
-            <div className="h-full w-full flex flex-col  justify-center gap-5 m-auto text-start  z-[20]">
-            <div className="h-full w-full">{" "}</div>
-            <div className="h-full w-full"></div>
+                   <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+                 <motion.div
+                variants={slideInFromRight(0.8)}
+                className=" w-[100vh] h-[5px]  z-[20] flex items-center justify-center ">
+                {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
+                <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1"}} 
+                 onMouseDown={onMouseDown}
+                />
+            </motion.div>
+            <motion.div variants={slideInFromRight(0.8)}className=" w-[40%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+            <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+            <div className="h-full w-full flex flex-col py-20 justify-center gap-5 m-auto text-start  z-[20]">
+
                 <motion.div
                     variants={slideInFromTop}
                     className="Welcome-box py-[8px] px-[7px]  border border-[#7042f88b] opacity-[0.9]"
@@ -66,6 +75,7 @@ const HeroContent = () => {
                     </span>
 
                 </motion.div>
+
                 <motion.p
                     variants={slideInFromLeft(0.8)}
                     className="text-lg text-gray-400 my-5 max-w-[600px]"
@@ -73,7 +83,6 @@ const HeroContent = () => {
                     {encyptionText("Empowering businesses with innovative solutions, we specialize in mobile app and web development, ensuring seamless user experiences. Our cybersecurity services protect your digital assets, while our engaging videos educate users on secure practices.")}
                 </motion.p>
 
-              
                 <motion.a
                   onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                   onMouseLeave={() => cursorChangeHandler("cursor")}
@@ -86,30 +95,9 @@ const HeroContent = () => {
                 </motion.a>
           
             </div>
-            <motion.div
-                variants={slideInFromRight(0.8)}
-                className=" w-[40%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
-            <motion.div
-                variants={slideInFromRight(0.8)}
-                className=" w-[100vh] h-[5px]  z-[20] flex items-center justify-center "
-            >
-              
-                {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
-                <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1"}} 
-                 onMouseDown={onMouseDown}
-                />
-
-
-                {/* <Image
-                    src="/mainIconsdark.svg"
-                    alt="work icons"
-                    height={650}
-                    width={650}
-                /> */}
-            </motion.div>
-            <motion.div
-                variants={slideInFromRight(0.8)}
-                className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+           
+           
+            {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
         </motion.div>
     );
 };
