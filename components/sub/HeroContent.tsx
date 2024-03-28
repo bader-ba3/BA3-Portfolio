@@ -16,7 +16,7 @@ import { EncryptionContext } from "@/context/encryptContext";
 import  encyptionText  from "../../utils/encyptionText";
 
 const HeroContent = () => {
-    var isLcked = true
+    var isLcked = false
     const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
 
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);

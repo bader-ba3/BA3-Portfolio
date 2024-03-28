@@ -17,7 +17,7 @@ const  encryptionText =(text: string)=>{
     }
     const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
 
-    return isEncryption ?text:encrypt(text)
+    return isEncryption ?encrypt(text):text
 }
 
 export default encryptionText;
