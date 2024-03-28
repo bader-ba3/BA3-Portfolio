@@ -32,19 +32,19 @@ const HeroContent = () => {
             initial="hidden"
             animate="visible"
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-            className="h-full w-full flex flex-col   px-20   justify-center mt-20 w-full z-[20] xl:flex-row">
+            className="h-full w-full flex flex-col   px-20  items-center justify-center  mt-20 w-full z-[20] xl:flex-row">
                    {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
                  <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-auto h-[500px]  z-[20] flex items-center justify-center ">
+                className=" w-[50%] h-[500px]  z-[20] flex items-center justify-center ">
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
                 <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1"}} 
                  onMouseDown={onMouseDown}
                 />
             </motion.div>
-            <motion.div variants={slideInFromRight(0.8)}className=" w-[50%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+            {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
          
-            <div className="h-full w-full flex flex-col py-20 justify-center gap-5 m-auto text-start  z-[20]">
+            <div className="h-full w-[50%] flex flex-col py-20 justify-center gap-5 m-auto text-start  z-[20]">
 
                 <motion.div
                     variants={slideInFromTop}
