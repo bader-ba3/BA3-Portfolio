@@ -1,4 +1,5 @@
 'use client';
+import React, { useState, useEffect } from 'react';
 
 import Encryption from "@/components/main/Encryption";
 import Hero from "@/components/main/Hero";
@@ -7,17 +8,36 @@ import Projects from "@/components/main/Projects";
 import OurSpace from "@/components/main/OurSpace";
 
 export default function Home() {
-   
+    const [width, setWidth] = useState(() => window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <main className="h-full w-full">
-            <div className="flex flex-col gap-20">
-                <Hero/>    
-                <OurSpace/>
-                <Encryption/>
-                <Projects/>
-                <Footer/>
-            </div>
-           
-        </main>
+        <h1 className="Welcome-text text-[200px]">
+        <p>Width of the screen is: {width}px</p>
+     </h1>
+       
     );
+    // return (
+    //     <main className="h-full w-full">
+    //         <div className="flex flex-col gap-20">
+    //             <Hero/>    
+    //             <OurSpace/>
+    //             <Encryption/>
+    //             <Projects/>
+    //             <Footer/>
+    //         </div>
+           
+    //     </main>
+    // );
 }
