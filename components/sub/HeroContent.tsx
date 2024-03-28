@@ -32,20 +32,25 @@ const HeroContent = () => {
             initial="hidden"
             animate="visible"
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-            className="flex flex-col items-center justify-center px-20  mt-20 w-full z-[20] xl:flex-row">
-            <div className="h-full w-full flex flex-col gap-5 justify-center m-auto text-start  z-[20]">
+            className="h-full w-full flex flex-col  px-20  justify-center mt-20 w-full z-[20] xl:flex-row">
+                
+            <div className="h-full w-full flex flex-col   justify-center gap-5 m-auto text-start  z-[20]">
+            <div className="h-full w-full">{" "}</div>
+            <div className="h-full w-full"></div>
                 <motion.div
                     variants={slideInFromTop}
-                    className="Welcome-box py-[8px] px-[7px] border border-[#7042f88b] opacity-[0.9]"
+                    className="Welcome-box py-[8px] px-[7px]  border border-[#7042f88b] opacity-[0.9]"
                 >
+                    
                     <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5"/>
                     <h1 className="Welcome-text text-[13px]">
                        {encyptionText("Easiest way to Build Applications")}
                     </h1>
                 </motion.div>
+                
                 <motion.div
                     variants={slideInFromLeft(0.5)}
-                    className="flex flex-col gap-6 mt-6 text-6xl font-bold text-white max-w-[600px] w-auto h-auto"
+                    className="flex flex-col gap-6 mt-6 text-6xl justify-center font-bold text-white max-w-[600px] w-auto h-auto"
                 >
                     <span 
                     className=""
@@ -84,11 +89,11 @@ const HeroContent = () => {
 
             <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-full h-full flex justify-center items-center py-20 z-[10]"
+                className=" w-full h-[5px] py-20 z-[20]"
             >
               
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
-                <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"0.7"}} 
+                <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1"}} 
                  onMouseDown={onMouseDown}
                 />
 
