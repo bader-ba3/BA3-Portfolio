@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React,{useContext,useState,useEffect} from "react";
 
 import {
@@ -18,16 +18,21 @@ const Footer = () => {
 
     const [size, setSize] = useState(hasWindow?window.innerWidth:9);
     useEffect(() => {
-      window.addEventListener("resize", () => {
-        console.log(window.innerHeight, window.innerWidth)
-        setSize(window.innerWidth)
-    });
-    });
+        const handleResize = () => {
+            setSize(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
       return (
         <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[20] ">
             <div className="w-full flex flex-col items-center justify-center m-auto">
-              <div 
+            <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
               className="w-auto h-[200px] z-[99] items-center justify-center" style={{scale:size *0.0015}} >
