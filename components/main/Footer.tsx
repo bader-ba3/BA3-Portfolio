@@ -39,7 +39,7 @@ const Footer = () => {
               <Spline   scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
               </div>
             
-              {/* <span className="text-[12px] ml-[6px]">{size}</span> */}
+              <span className="text-[12px] ml-[6px]">{size}</span>
               <div className="mb-[70px] text-[15px] text-center">
                   
                 </div>
