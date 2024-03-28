@@ -6,6 +6,7 @@ import {motion} from 'framer-motion'
 import {slideInFromLeft, slideInFromRight, slideInFromTop} from '@/utils/motion'
 import {SparklesIcon} from '@heroicons/react/24/solid'
 import { MouseContext } from "@/context/mouse-context";
+import  encyptionText  from "../../utils/encyptionText";
 
 const SkillText = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
@@ -18,22 +19,22 @@ const SkillText = () => {
             >
                 <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5"/>
                 <h1 className="Welcome-text text-[13px]">
-                    Think better with Ba3 
+                    {encyptionText("Think better with Ba3 ")}
                 </h1>
             </motion.div>
             <motion.div variants={slideInFromLeft(0.5)}className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'></motion.div>
             <motion.div
                 variants={slideInFromLeft(0.5)}
-                className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
+                className='text-[40px] text-white font-medium mt-[10px] text-center mb-[15px]'
             >
-                Making apps with modern technologies
+                {encyptionText("Making apps with modern technologies")}
             </motion.div>
 
             <motion.div
                 variants={slideInFromRight(0.5)}
-                className='text-[20px] text-white font-medium mt-[10px] text-center mb-[15px]'
+                className='text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]'
             >
-                Never miss a task, deadline or idea
+               {encyptionText(" Never miss a task, deadline or idea")}
             </motion.div>
 
         
@@ -49,7 +50,7 @@ const SkillText = () => {
                 target="_blank"
                     variants={slideInFromLeft(1)}
                     >
-                     DIVING IN OUR SPACE!
+                     {encyptionText("DIVING IN OUR SPACE!")}
                 </motion.a>
         
         

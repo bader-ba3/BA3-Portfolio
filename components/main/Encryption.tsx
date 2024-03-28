@@ -5,6 +5,7 @@ import {motion} from "framer-motion";
 import {slideInFromLeft,
     slideInFromRight,slideInFromTop} from "@/utils/motion";
 import Image from "next/image";
+import  encyptionText  from "../../utils/encyptionText";
 
 const Encryption = () => {
     return (
@@ -16,12 +17,12 @@ const Encryption = () => {
                     variants={slideInFromTop}
                     className="text-[40px] font-medium text-center text-gray-200"
                 >
-                    Performance
+                    {encyptionText("Performance")}
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
                         {" "}
-                        &{" "}
+                        {encyptionText("&")}{" "}
                     </span>
-                    Security
+                    {encyptionText("Security")}
                 </motion.div>
              </div>
             <div
@@ -29,18 +30,18 @@ const Encryption = () => {
               
 
                 <div className="Welcome-box px-[15px] py-[4px] z-[20] brder my-[20px] border-[#7042f88b] opacity-[0.9]">
-                    <h1 className="Welcome-text text-[12px]">Encryption</h1>
+                    <h1 className="Welcome-text text-[12px]">{encyptionText("Encryption")}</h1>
                 </div>
                 <motion.div
                 variants={slideInFromLeft(0.5)}
                 className='text-[35px] text-white font-medium mt-[0px] text-center mb-[0px]'
             >
-                Hardened security
+                {encyptionText("Hardened security")}
             </motion.div>
                 <motion.p
                     className="text-[15px] text-white my-5 max-w-[600px] text-center px-[20px]"
                 >
-                    The contents of your applications are end-to-end encrypted. No one else can read them, <br /> (not even us).
+                    {encyptionText("The contents of your applications are end-to-end encrypted. No one else can read them,")} <br /> {encyptionText("(not even us).")}
                 </motion.p>
             </div>
         

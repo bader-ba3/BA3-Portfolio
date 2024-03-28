@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import  encyptionText  from "../../utils/encyptionText";
 
 interface Props {
     src: string;
@@ -19,8 +20,8 @@ const ProjectCard = ({src, title, description}: Props) => {
             />
 
             <div className="relative p-4">
-                <h1 className="text-2xl font-semibold text-white">{title}</h1>
-                <p className="mt-2 text-gray-300">{description}</p>
+                <h1 className="text-2xl font-semibold text-white">{encyptionText(title)}</h1>
+                <p className="mt-2 text-gray-300">{encyptionText(description)}</p>
             </div>
         </div>
     );

@@ -10,6 +10,7 @@ import SkillText from "../sub/OurSpaceText";
 import {slideInFromLeft,
     slideInFromRight,slideInFromTop} from "@/utils/motion";
 import {motion} from "framer-motion";
+import  encyptionText  from "../../utils/encyptionText";
 
 const OurSpace = () => {
     return (
@@ -25,10 +26,10 @@ const OurSpace = () => {
            
             <motion.div
                     variants={slideInFromTop}
-                    className="text-[40px] font-medium text-center text-gray-200"
+                    className="text-[50px] font-medium text-center text-gray-200"
                 >
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-                       Our Space
+                       {encyptionText("Our Space")}
                     </span>
                 </motion.div>
              </div>

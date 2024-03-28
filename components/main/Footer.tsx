@@ -11,6 +11,7 @@ import {
 import {FaYoutube} from "react-icons/fa";
 import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
+import  encyptionText  from "../../utils/encyptionText";
 
 const Footer = () => {
         const hasWindow = typeof window !== 'undefined';
@@ -33,15 +34,21 @@ const Footer = () => {
               <Spline   scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
               </div>
             
-              <span className="text-[15px] ml-[6px]">{size}</span>
+              <span className="text-[0px] ml-[6px]">{size}</span>
               <div className="mb-[70px] text-[15px] text-center">
                   
                 </div>
               <div className="mb-[20px] text-[15px] text-center">
-                    &copy;  Copyright 2024, All Rights Reserved.
+                    {encyptionText("© Copyright 2024, All Rights Reserved.")}
                 </div>
                 <div className="mb-[20px] text-[15px] text-center">
-                     Made with 💜 by BA3.co
+                {encyptionText("Made with")}
+                <span className="text-purple-500">
+                    
+                        {" "}
+                        {encyptionText("💜")}{" "}
+                    </span>
+                     {encyptionText("by BA3.co")}
                 </div>
                 {/* <div className="w-full h-full flex flex-row items-center justify-around flex-wrap">
                     <div className="min-w-[200px] h-auto flex flex-col items-center justify-start">

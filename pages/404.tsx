@@ -39,7 +39,7 @@ const Page404 = () => {
         <StarsCanvas/>
         <Navbar/> 
         <div className="w-full h-[100vh] flex items-center justify-center z-[99]">
-        <Spline className=" z-[99]" scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode" style={{scale:size *0.0015}}/>
+        <Spline className=" z-[20]" scene="https://prod.spline.design/b6t8O2Ycvz6EalBc/scene.splinecode" style={{scale:size *0.0015}}/>
     </div>
    
         <HideOnTouchscreen />
