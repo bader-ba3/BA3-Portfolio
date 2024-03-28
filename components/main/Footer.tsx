@@ -30,13 +30,12 @@ const Footer = () => {
     }, []);
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
       return (
-        <div className="w-full h-full bg-transparent text-gray-200 shadow-lg p-0 z-[20] ">
-            <div className="w-full flex flex-col items-center justify-center m-auto">
+        <div className="w-full h-full  flex-col text-gray-200 p-0 z-[20] items-center justify-center">
             <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
-              className="w-auto h-[200px] z-[99] items-center justify-center" style={{scale:size *0.0015}} >
-              <Spline   scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
+              className="w-[300px] h-[300px] z-[99] items-center justify-center" style={{scale:1 ,backgroundColor: '#cccccc'}} >
+              <Spline className="w-[300px] h-[300px] z-[99] items-center justify-center"  scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"   />
               </div>
             
               <span className="text-[12px] ml-[6px]">{size}</span>
@@ -149,7 +148,6 @@ const Footer = () => {
                    {width}
                 </div> */}
                 
-            </div>
         </div>
     )
 }

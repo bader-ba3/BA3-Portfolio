@@ -5,7 +5,7 @@ import { EncryptionContext } from "@/context/encryptContext";
 const  encryptionText =(text: string)=>{
     function encrypt(text: String){
         var _ = ""
-       for(var i in text){https://gragon.es/wp-content/uploads/2024/01/Sobre-mi-gragon-gr.png
+       for(var i in text){
     
         if( text[i] ==" "){
             _ +=" "
