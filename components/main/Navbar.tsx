@@ -3,9 +3,12 @@ import { Socials } from "@/constants";
 import Image from "next/image";
 import React,{useContext} from "react";
 import { MouseContext } from "@/context/mouse-context";
+import { EncryptionContext } from "@/context/encryptContext";
+import  encyptionText  from "../../utils/encyptionText";
 
 const Navbar = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
     const hasWindow = typeof window !== 'undefined';
 
     return (
@@ -21,7 +24,7 @@ const Navbar = () => {
                         className="cursor-pointer hover:animate-slowspin"
                     />
                     <span className="w-[120px] font-bold ml-[10px] text-gray-300">
-                        BA3
+                       {encyptionText("BA3")}
                     </span>
                 </a> 
                       <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
@@ -29,20 +32,20 @@ const Navbar = () => {
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#about-me":"#about-me"} className="cursor-pointer hover:text-purple-500">
-                            About us
+                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#about-us":"#about-us"} className="cursor-pointer hover:text-purple-500">
+                            {encyptionText("About us")}
                         </a>
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                         href={hasWindow?window.location.protocol+"//"+window.location.host+"/#our-space":"#our-space"} className="cursor-pointer hover:text-purple-500">
-                            Our Space
+                            {encyptionText("Our Space")}
                         </a>
                         <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                         href={hasWindow?window.location.protocol+"//"+window.location.host+"/#projects":"#projects"} className="cursor-pointer hover:text-purple-500">
-                            Projects
+                            {encyptionText("Our Projects")}
                         </a>
                     </div>
                 </div>
@@ -53,13 +56,17 @@ const Navbar = () => {
                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                         onMouseLeave={() => cursorChangeHandler("cursor")}
                         href={social.link} className="cursor-pointer px-[5px] " target="_blank" key={social.name}>
-                            <Image
+                           { isEncryption
+                           ? <span className="w-[20px] font-bold  text-gray-300">
+                           {encyptionText("ooo")}
+                            </span>
+                            :<Image
                                 src={social.src}
                                 alt={social.name}
                                 width={24}
                                 height={24}
                                 style={{ cursor: "pointer" }}
-                            />
+                            />}
                         </a>
                     ))}
                 </div>

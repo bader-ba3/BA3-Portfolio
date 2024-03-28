@@ -22,11 +22,8 @@ const HeroContent = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     // const isTouchscreen = useState(IsTouchscreen);  
     function onMouseDown(e: { target: { name: string; }; }) {
-        
         isLcked=!isLcked
-        console.log(isLcked);
         encryptionChangeHandler(isLcked)
-        
       }
     return (
       
