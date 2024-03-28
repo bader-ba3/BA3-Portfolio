@@ -8,7 +8,9 @@ import Projects from "@/components/main/Projects";
 import OurSpace from "@/components/main/OurSpace";
 
 export default function Home() {
-    const [width, setWidth] = useState(() => window.innerWidth);
+    const hasWindow = typeof window !== 'undefined';
+
+    const [width, setWidth] = useState(() =>(hasWindow? window.innerWidth:50));
 
     useEffect(() => {
         const handleResize = () => {
