@@ -34,7 +34,7 @@ const HeroContent = () => {
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
             className="h-full w-full flex flex-col  px-20  justify-center mt-20 w-full z-[20] xl:flex-row">
                 
-            <div className="h-full w-full flex flex-col   justify-center gap-5 m-auto text-start  z-[20]">
+            <div className="h-full w-full flex flex-col  justify-center gap-5 m-auto text-start  z-[20]">
             <div className="h-full w-full">{" "}</div>
             <div className="h-full w-full"></div>
                 <motion.div
@@ -89,7 +89,7 @@ const HeroContent = () => {
 
             <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-full h-[5px] py-20 z-[20]"
+                className=" w-[100vh] h-[5px] py-20 z-[20] flex items-center justify-center "
             >
               
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
