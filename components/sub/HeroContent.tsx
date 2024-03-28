@@ -86,10 +86,12 @@ const HeroContent = () => {
                 </motion.a>
           
             </div>
-
             <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-[95vh] h-[5px]  z-[20] flex items-center justify-center "
+                className=" w-[40%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
+            <motion.div
+                variants={slideInFromRight(0.8)}
+                className=" w-[100vh] h-[5px]  z-[20] flex items-center justify-center "
             >
               
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
@@ -105,6 +107,9 @@ const HeroContent = () => {
                     width={650}
                 /> */}
             </motion.div>
+            <motion.div
+                variants={slideInFromRight(0.8)}
+                className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
         </motion.div>
     );
 };
