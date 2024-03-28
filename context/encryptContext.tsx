@@ -3,7 +3,7 @@ import React, { createContext, useState } from "react";
 
 export const EncryptionContext = createContext({
   isEncryption: true,
-  encryptionChangeHandler: (_: boolean) => {
+  encryptionChangeHandler: (_: any) => {
     console.log(_);
   },
 });
