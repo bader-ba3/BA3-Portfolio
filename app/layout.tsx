@@ -63,6 +63,7 @@ export default function RootLayout({
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
+        
         {children}
         <HideOnTouchscreen />
        </MouseContextProvider>

@@ -116,6 +116,8 @@ const HeroContent = () => {
 
             <motion.div
                 variants={slideInFromRight(0.8)}
+                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                onMouseLeave={() => cursorChangeHandler("cursor")}
                 className=" w-[50%] h-[500px]  z-[99] px-20  flex items-center justify-center ">
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
                 <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1.25"}} 

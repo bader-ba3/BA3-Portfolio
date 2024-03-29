@@ -58,9 +58,9 @@ const Navbar = () => {
                 <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                         onMouseDown={()=> LanguageChangeHandler("ar")}
+                         onMouseDown ={() => LanguageChangeHandler("ar")}
                          className="cursor-pointer text-white hover:text-purple-500">
-                            {languageType=="en"?"عربي":"English"}
+                            {languageType=="en"?"عربي":"english"}
                         </a>
                     {Socials.map((social) => (
                         <a 

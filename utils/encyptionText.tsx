@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { EncryptionContext } from "@/context/encryptContext";
 import { LanguageContext } from "@/context/languageContext";
 
-const  encryptionText =(text: string)=>{
+const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
     const  en:Record<string, string> = {
         "Easiest way to Build Applications":"Easiest way to Build Applications",
         "Providing":"Providing",
@@ -16,7 +16,28 @@ const  encryptionText =(text: string)=>{
         "Our Space": "Our Space",
         "Our Projects":"Our Projects",
         "ooo":"ooo",
-       
+        "Think better with Ba3":"ooo",
+        "Making apps with modern technologies":"Making apps with modern technologies",
+        "Never miss a task, deadline or idea":"Never miss a task, deadline or idea",
+        "DIVING IN OUR SPACE!":"DIVING IN OUR SPACE!",
+        "Performance":"Performance",
+        "&":"&",
+        "Security":"Security",
+        "Hardened security":"Hardened security",
+        "encrypt_des":"The contents of your applications are end-to-end encrypted. No one else can read them,",
+        "(not even us).":"(not even us).",
+        "Rights_Reserved":"© Copyright 2024, All Rights Reserved.",
+        "💜":"💜",
+        "Made with":"Made with",
+        "by BA3.co":"by BA3.co",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
     }
     const ar:Record<string, string> = {
         "Easiest way to Build Applications":"اسهل طريق لبناء مشروعك",
@@ -30,7 +51,28 @@ const  encryptionText =(text: string)=>{
         "Our Space":"فضائنا",
         "Our Projects":"مشاريعنا",
         "ooo":"ooo",
-     
+        "Think better with Ba3":"فكر جيدا مع ba3",
+        "Making apps with modern technologies":"نصنع تطبيقاتنا ب احدث التقنيات",
+        "Never miss a task, deadline or idea":"٫٫٫٫٫٫٫٫٫٫٫٫٫٫٫٫٫٫",
+        "DIVING IN OUR SPACE!":"غص في فضائنا",
+        "Performance":"الاداء",
+        "&":"&",
+        "Security":"الحماية",
+        "Hardened security":"اقوىىىىىىىى حماية",
+        "encrypt_des":"بيانات تطبيق محمية بتشفير الطرف للطرف لايمكن لأحد ان يقرأها",
+        "(not even us).":"(ولا حتى نحن)",
+        "Rights_Reserved":"© حقوق الطبع والنشر 2024، جميع الحقوق محفوظة.",
+        "💜":"💜",
+        "Made with":"صنع",
+        "by BA3.co":"بواسطة BA3.co",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        "":"",
+        
     }
 
 
@@ -51,8 +93,12 @@ const  encryptionText =(text: string)=>{
     }
     const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
     const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
-
-    return isEncryption ?encrypt(text):languageType =="en"?en[text]:ar[text]
+        
+    return options?.withTranslate!=null &&options?.withTranslate==false
+        ?text
+        :languageType =="en"
+            ?en[text]
+            :ar[text]
 }
 
 export default encryptionText;

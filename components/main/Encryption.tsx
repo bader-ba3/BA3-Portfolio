@@ -41,7 +41,7 @@ const Encryption = () => {
                 <motion.p
                     className="text-[15px] text-white my-5 max-w-[600px] text-center px-[20px]"
                 >
-                    {encyptionText("The contents of your applications are end-to-end encrypted. No one else can read them,")} <br /> {encyptionText("(not even us).")}
+                    {encyptionText("encrypt_des")} <br /> {encyptionText("(not even us).")}
                 </motion.p>
             </div>
         

@@ -1,5 +1,6 @@
 "use client"
-import React, { createContext, useState } from "react";
+import React, { createContext, useState,useContext } from "react";
+import { LanguageContext } from "@/context/languageContext";
 
 export const EncryptionContext = createContext({
   isEncryption: false,
@@ -10,9 +11,20 @@ export const EncryptionContext = createContext({
 
 const EncryptionContextProvider = (props: { children: any }) => {
   const [isEncryption, setEncryptionType] = useState(false);
+  const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
   const encryptionChangeHandler = (isEncryption: React.SetStateAction<boolean>) => {
     setEncryptionType(isEncryption);
+    console.log(isEncryption);
+    if(isEncryption){
+      document.documentElement.style.setProperty("font-family","Flow Rounded")
+    }else{
+      if(languageType=="ar"){
+        document.documentElement.style.setProperty("font-family", "Noto Sans Arabic")
+      }else{
+        document.documentElement.style.setProperty("font-family", "Varela Round")
+      }
+    }
   };
 
   return (
