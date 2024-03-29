@@ -34,8 +34,8 @@ const Footer = () => {
             <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
-              className=" w-full h-[200px] z-[0] items-center justify-center" style={{scale:size*0.0015}} >
-              <Spline  scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"  />
+              className=" w-full h-[100px] z-[0] items-center justify-center" style={{scale:1,overflow:'auto'}} >
+              <Spline  scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"  style={{overflow:'auto'}}/>
               </div>
             
               <span className="text-[12px] ml-[6px]">{size}</span>
