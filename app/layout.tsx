@@ -8,8 +8,8 @@ import page404 from "../pages/404";
 import Navbar from "@/components/main/Navbar";
 import MouseContextProvider from "../context/mouse-context";
 import EncryptionContextProvider from "../context/encryptContext";
-import LanguageContextProvider from "../context/languageContext";
-import React,{useState,useEffect} from 'react';
+import LanguageContextProvider,{LanguageContext} from "../context/languageContext";
+import React,{useState,useEffect,useContext} from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
@@ -38,9 +38,11 @@ export default function RootLayout({
         setSize(window.innerWidth)
     });
     });
+    const { languageType,LanguageChangeHandler } = useContext(LanguageContext);
+
     return (
     
-        <html lang="en">
+        <html lang={languageType}>
             <head>
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>

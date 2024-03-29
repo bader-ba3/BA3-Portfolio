@@ -14,7 +14,9 @@ const Navbar = () => {
     const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
     return (
-        <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
+        <div 
+        style={{direction:languageType=="ar"?"rtl":"ltr"}}
+        className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
             <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
             
                 <a className="h-auto w-auto flex flex-row items-center">
@@ -58,7 +60,7 @@ const Navbar = () => {
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                          onMouseDown={()=> LanguageChangeHandler("ar")}
                          className="cursor-pointer text-white hover:text-purple-500">
-                            HellNo
+                            {languageType=="en"?"عربي":"English"}
                         </a>
                     {Socials.map((social) => (
                         <a 

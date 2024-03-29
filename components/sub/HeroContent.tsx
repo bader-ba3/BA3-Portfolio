@@ -116,7 +116,7 @@ const HeroContent = () => {
 
             <motion.div
                 variants={slideInFromRight(0.8)}
-                className=" w-[50%] h-[500px]  z-[30] px-20  flex items-center justify-center ">
+                className=" w-[50%] h-[500px]  z-[99] px-20  flex items-center justify-center ">
                 {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
                 <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1.25"}} 
                  onMouseDown={onMouseDown}
@@ -134,6 +134,7 @@ const HeroContent = () => {
 
 
         <motion.div
+        style={{direction:languageType=="ar"?"rtl":"ltr"}}
         initial="hidden"
         animate="visible"
         // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
@@ -143,7 +144,7 @@ const HeroContent = () => {
         {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
       <motion.div
             variants={slideInFromRight(0.8)}
-            className=" w-[500px] h-[500px]  z-[20]  "style={{scale :1 , overflow:"auto"}} >
+            className=" w-[500px] h-[500px]  z-[40]  "style={{scale :1 , overflow:"auto"}} >
             {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
             <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" 
              onMouseDown={onMouseDown}
