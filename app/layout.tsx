@@ -8,6 +8,7 @@ import page404 from "../pages/404";
 import Navbar from "@/components/main/Navbar";
 import MouseContextProvider from "../context/mouse-context";
 import EncryptionContextProvider from "../context/encryptContext";
+import LanguageContextProvider from "../context/languageContext";
 import React,{useState,useEffect} from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
@@ -55,6 +56,7 @@ export default function RootLayout({
         >  
        
        <React.StrictMode>
+         <LanguageContextProvider>
          <EncryptionContextProvider>
          <MouseContextProvider>
         <StarsCanvas/>
@@ -63,6 +65,7 @@ export default function RootLayout({
         <HideOnTouchscreen />
        </MouseContextProvider>
        </EncryptionContextProvider>
+       </LanguageContextProvider>
         </React.StrictMode> 
         </body>
     

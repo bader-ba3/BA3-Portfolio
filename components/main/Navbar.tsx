@@ -4,12 +4,14 @@ import Image from "next/image";
 import React,{useContext} from "react";
 import { MouseContext } from "@/context/mouse-context";
 import { EncryptionContext } from "@/context/encryptContext";
+import { LanguageContext } from "@/context/languageContext";
 import  encyptionText  from "../../utils/encyptionText";
 
 const Navbar = () => {
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
     const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
     const hasWindow = typeof window !== 'undefined';
+    const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
     return (
         <div className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10">
@@ -49,8 +51,15 @@ const Navbar = () => {
                         </a>
                     </div>
                 </div>
-
+              
                 <div className="flex flex-row gap-4 items-center justify-between">
+                <a
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                         onMouseDown={()=> LanguageChangeHandler("ar")}
+                         className="cursor-pointer text-white hover:text-purple-500">
+                            HellNo
+                        </a>
                     {Socials.map((social) => (
                         <a 
                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
