@@ -76,16 +76,18 @@ export default function RootLayout({children,}: {children: React.ReactNode;}) {
          {/* <div id="root"></div> */}
      
        <React.StrictMode>
+       <EncryptionContextProvider>
          <LanguageContextProvider>
-         <EncryptionContextProvider>
+         
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
         {children}
         <HideOnTouchscreen />
        </MouseContextProvider>
-       </EncryptionContextProvider>
        </LanguageContextProvider>
+       </EncryptionContextProvider>
+      
         </React.StrictMode> 
         
         </body>

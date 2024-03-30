@@ -21,6 +21,12 @@ const LanguageContextProvider = (props: { children: any }) => {
     console.log("_")
     if(isEncryption){
       document.documentElement.style.setProperty("font-family","Flow Rounded")
+      if(languageType=="ar"){
+          setLanguageType("en");
+        
+        }else{
+          setLanguageType("ar");
+        }
     }else 
    { if(languageType=="ar"){
     document.documentElement.style.setProperty("font-family", "Varela Round")
@@ -32,8 +38,8 @@ const LanguageContextProvider = (props: { children: any }) => {
     }
     
   }
-  console.log("isEncryption"+isEncryption)
-  console.log("languageType"+languageType)
+  console.log("isEncryption "+isEncryption)
+  console.log("languageType "+languageType)
   console.log("+++")
   };
 

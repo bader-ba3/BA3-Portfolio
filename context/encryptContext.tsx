@@ -25,6 +25,7 @@ const EncryptionContextProvider = (props: { children: any }) => {
       }
     }
     setEncryptionType(isEncryption);
+    
   };
 
   return (
