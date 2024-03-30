@@ -55,7 +55,7 @@ const HeroContent = () => {
             initial="hidden"
             animate="visible"
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-            className="h-full w-full flex flex-col   px-20  items-center justify-center  mt-20 w-full z-[20] xl:flex-row">
+            className="h-full w-full flex flex-col   px-20  items-center justify-center  mt-20 w-full z-[40] xl:flex-row">
                    {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
             
          
@@ -122,7 +122,7 @@ const HeroContent = () => {
             <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
             <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
 
-            <motion.div
+            <motion.a
                 variants={slideInFromRight(0.8)}
                 onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                 onMouseLeave={() => cursorChangeHandler("cursor")}
@@ -131,7 +131,7 @@ const HeroContent = () => {
                 <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" style={{scale :"1.25"}} 
                  onMouseDown={onMouseDown}
                 />
-            </motion.div>
+            </motion.a>
             {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
         </motion.div>
         
@@ -152,14 +152,14 @@ const HeroContent = () => {
                {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
              
         {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
-      <motion.div
+      <motion.a
             variants={slideInFromRight(0.8)}
             className=" w-[500px] h-[500px]  z-[40]  "style={{scale :1 , overflow:"auto"}} >
             {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
             <Spline scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode" 
              onMouseDown={onMouseDown}
             />
-        </motion.div>
+        </motion.a>
         <div
        
         className="h-full w-[100%] flex flex-col py-0 px-0 justify-center gap-5    z-[20]">
