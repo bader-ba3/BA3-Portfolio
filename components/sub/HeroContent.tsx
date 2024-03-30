@@ -144,7 +144,7 @@ const HeroContent = () => {
 
 
         <motion.div
-        // style={{direction:languageType=="ar"?"rtl":"ltr"}}
+        style={{direction:languageType=="ar"?"rtl":"ltr"}}
         initial="hidden"
         animate="visible"
         // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
