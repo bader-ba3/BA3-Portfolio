@@ -46,7 +46,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         "in security, development and innovation.":"في الحماية و التطوير و الابتكار.",
         "addad":"تمكين مشروعك بحلول إبداعية,مختصون ببناء تطبيقات الجوال و الويب, ضمان تجارب مستخدم سلسة. خدماتنا الأمنية تحمي أصولك الرقمية,بينما تعمل مقاطع الفيديو الجذابة لدينا على تثقيف المستخدمين حول الممارسات الآمنة.",
         "Diving in our Space!":"غُص في فضائنا",
-        "BA3":"باع و لم يشتري",
+        "BA3":"BA3",
         "About us":"من نحن",
         "Our Space":"فضائنا",
         "Our Projects":"مشاريعنا",
@@ -86,7 +86,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         if( text[i] ==" "){
             _ +=" "
         }else{
-            _ +="_"
+            _ +="a"
         }
        }
         return _
@@ -98,6 +98,8 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         ?text
         :languageType =="en"
             ?en[text]
+            :isEncryption
+            ?encrypt(ar[text])
             :ar[text]
 }
 

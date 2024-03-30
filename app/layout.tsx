@@ -1,4 +1,5 @@
 'use client';
+import  Home from "../app/page";
 
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
@@ -14,6 +15,8 @@ import Head from 'next/head';
 import Script from 'next/script'
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
 import Spline from '@splinetool/react-spline';
+import ReactDOM from "react-dom/client";
+import { createRoot } from 'react-dom/client';
 
 
 
@@ -25,24 +28,38 @@ const inter = Inter({subsets: ["latin"]});
     
 // };
 
-export default function RootLayout({
-                                       children,
-                                   }: {
-    children: React.ReactNode;
-}) {
+export default function RootLayout({children,}: {children: React.ReactNode;}) {
     const hasWindow = typeof window !== 'undefined';
+    useEffect(() => {
+        window.addEventListener("resize", () => {
+          setSize(window.innerWidth)
+      });
+      });
 
     const [size, setSize] = useState(hasWindow?window.innerWidth:500);
-    useEffect(() => {
-      window.addEventListener("resize", () => {
-        setSize(window.innerWidth)
-    });
-    });
-    const { languageType,LanguageChangeHandler } = useContext(LanguageContext);
 
+// const someElement = document.getElementById('root')!;    
+// if(someElement) {
+//     createRoot(someElement!).render( 
+//     <React.StrictMode>
+       
+//         <LanguageContextProvider>
+//         <EncryptionContextProvider>
+//         <MouseContextProvider>
+//        <StarsCanvas/>
+//        <Navbar/> 
+//        <Home/>
+//        {/* {children} */}
+//        <HideOnTouchscreen />
+//       </MouseContextProvider>
+//       </EncryptionContextProvider>
+//       </LanguageContextProvider>
+//        </React.StrictMode> 
+//       )
+// }
     return (
     
-        <html lang={languageType}>
+        <html lang="en">
             <head>
             <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
@@ -56,22 +73,26 @@ export default function RootLayout({
         <body
             className={` bg-[#030014] overflow-y-scroll overflow-x-hidden`}
         >  
-       
+         {/* <div id="root"></div> */}
+     
        <React.StrictMode>
          <LanguageContextProvider>
          <EncryptionContextProvider>
          <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
-        
         {children}
         <HideOnTouchscreen />
        </MouseContextProvider>
        </EncryptionContextProvider>
        </LanguageContextProvider>
         </React.StrictMode> 
+        
         </body>
     
-        </html>
+        </html> 
+        
     );
+    
+    
 }

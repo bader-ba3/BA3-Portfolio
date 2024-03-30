@@ -14,8 +14,7 @@ const EncryptionContextProvider = (props: { children: any }) => {
   const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
   const encryptionChangeHandler = (isEncryption: React.SetStateAction<boolean>) => {
-    setEncryptionType(isEncryption);
-    console.log(isEncryption);
+   
     if(isEncryption){
       document.documentElement.style.setProperty("font-family","Flow Rounded")
     }else{
@@ -25,6 +24,7 @@ const EncryptionContextProvider = (props: { children: any }) => {
         document.documentElement.style.setProperty("font-family", "Varela Round")
       }
     }
+    setEncryptionType(isEncryption);
   };
 
   return (

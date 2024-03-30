@@ -25,6 +25,7 @@ const HeroContent = () => {
     // const isTouchscreen = useState(IsTouchscreen);  
     function onMouseDown(e: { target: { name: string; }; }) {
         isLcked=!isLcked
+        console.log("onMouseDown")
         encryptionChangeHandler(isLcked)
       }
 
@@ -58,10 +59,10 @@ const HeroContent = () => {
                    {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
             
          
-            <div
+            <motion.div
             className="h-full w-[50%] flex flex-col py-20  justify-center gap-5 m-auto text-start  z-[20]">
-
-                <motion.div
+  
+              <motion.div
                 
                     variants={slideInFromTop}
                     className="Welcome-box py-[8px] px-[7px]  border border-[#7042f88b] opacity-[0.9]"
@@ -72,6 +73,7 @@ const HeroContent = () => {
                   {encyptionText("Easiest way to Build Applications")}
                     </h1>
                 </motion.div>
+                
                 
                 <motion.div
                     variants={slideInFromLeft(0.5)}
@@ -92,6 +94,7 @@ const HeroContent = () => {
 
                 </motion.div>
 
+
                 <motion.p
                     variants={slideInFromLeft(0.8)}
                     className="text-lg text-gray-400 my-5 max-w-[600px]"
@@ -109,8 +112,13 @@ const HeroContent = () => {
                     >
                    {encyptionText("Diving in our Space!")}
                 </motion.a>
-          
-            </div>
+     
+            
+
+  
+      
+            </motion.div>
+            
             <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
             <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
 
@@ -136,7 +144,7 @@ const HeroContent = () => {
 
 
         <motion.div
-        style={{direction:languageType=="ar"?"rtl":"ltr"}}
+        // style={{direction:languageType=="ar"?"rtl":"ltr"}}
         initial="hidden"
         animate="visible"
         // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">

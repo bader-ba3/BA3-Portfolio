@@ -16,19 +16,25 @@ const LanguageContextProvider = (props: { children: any }) => {
   const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
 
   const LanguageChangeHandler = () => {
-
+    console.log("isEncryption "+isEncryption)
+    console.log("languageType "+languageType)
+    console.log("_")
     if(isEncryption){
       document.documentElement.style.setProperty("font-family","Flow Rounded")
     }else 
    { if(languageType=="ar"){
+    document.documentElement.style.setProperty("font-family", "Varela Round")
       setLanguageType("en");
-      document.documentElement.style.setProperty("font-family", "Varela Round")
+     
     }else{
-      setLanguageType("ar");
       document.documentElement.style.setProperty("font-family", "Noto Sans Arabic")
+      setLanguageType("ar");
     }
+    
   }
-
+  console.log("isEncryption"+isEncryption)
+  console.log("languageType"+languageType)
+  console.log("+++")
   };
 
   return (

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Redacted+Script:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Old+South+Arabian&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Flow+Rounded&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
 
@@ -17,18 +17,23 @@
      /* font-family: "Flow Rounded", system-ui; */
      /* "Noto Sans Arabic" */
      /* font-family: "Varela Round", sans-serif; */
-
+    
    }  
- :root{
-    font-family: "Varela Round"
- }
+ /* :root{
+    font-family: "Varela Round";
+
+
+
+ } */
 .cursive {
     /* font-family: "Cedarville Cursive", cursive; */
     /* font-family: "Noto Sans Old South Arabian", sans-serif; */
-  
+ 
+
 }
 
 .Welcome-text {
+  
     background: linear-gradient(
             0deg,
             rgba(255, 255, 255, 0.4),
@@ -41,7 +46,14 @@
     -webkit-text-fill-color: transparent;
 }
 
+/* .landing-text {
+  
+    font-size: 80px;
+    font-weight: bold;
+
+} */
 .Welcome-box {
+    
     isolation: isolate;
     overflow: hidden;
     align-items: center;
