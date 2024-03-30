@@ -9,7 +9,9 @@ import  encyptionText  from "../../utils/encyptionText";
 
 const Encryption = () => {
     return (
-        <div className="flex flex-row relative items-center justify-center  w-full h-[75vh]">
+        <div 
+        id="encryption"
+        className="flex flex-row relative items-center justify-center  w-full h-[75vh]">
             
             <div className="absolute w-auto h-auto top-0 z-[5]">
             

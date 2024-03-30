@@ -42,8 +42,8 @@ const Navbar = () => {
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#our-space":"#our-space"} className="cursor-pointer hover:text-purple-500">
-                            {encyptionText("Our Space")}
+                        href={hasWindow?window.location.protocol+"//"+window.location.host+"/#encryption":"#encryption"} className="cursor-pointer hover:text-purple-500">
+                            {encyptionText("Encryption")}
                         </a>
                         <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
