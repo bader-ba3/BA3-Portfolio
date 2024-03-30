@@ -14,7 +14,7 @@ const EncryptionContextProvider = (props: { children: any }) => {
   const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
   const encryptionChangeHandler = (isEncryption: React.SetStateAction<boolean>) => {
-   
+    console.log(languageType)
     if(isEncryption){
       document.documentElement.style.setProperty("font-family","Flow Rounded")
     }else{
