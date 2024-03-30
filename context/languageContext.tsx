@@ -23,7 +23,7 @@ const LanguageContextProvider = (props: { children: any }) => {
       document.documentElement.style.setProperty("font-family","Flow Rounded")
       if(languageType=="ar"){
           setLanguageType("en");
-        
+          
         }else{
           setLanguageType("ar");
         }
