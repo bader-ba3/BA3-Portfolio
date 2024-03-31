@@ -5,7 +5,6 @@ import {
     Other_skill,
 } from "@/constants";
 import React from "react";
-import SkillDataProvider from "../sub/SkillDataProvider";
 import SkillText from "../sub/OurSpaceText";
 import {slideInFromLeft,
     slideInFromRight,slideInFromTop} from "@/utils/motion";

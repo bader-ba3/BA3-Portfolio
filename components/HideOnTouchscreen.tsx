@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState, useEffect ,useContext} from 'react';
 import { motion } from 'framer-motion';
 import { MouseContext } from "@/context/mouse-context";

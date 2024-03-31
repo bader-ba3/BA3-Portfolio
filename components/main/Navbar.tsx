@@ -1,6 +1,6 @@
 "use client"
 import { Socials } from "@/constants";
-import Image from "next/image";
+// import Image from "next/image";
 import React,{useContext} from "react";
 import { MouseContext } from "@/context/mouse-context";
 import { EncryptionContext } from "@/context/encryptContext";
@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
             
                 <a className="h-auto w-auto flex flex-row items-center">
-                    <Image
+                    <img
                         src="/NavLogo.png"
                         alt="logo"
                         width={40}
@@ -31,7 +31,7 @@ const Navbar = () => {
                        {encyptionText("BA3")}
                     </span>
                 </a> 
-                      <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
+                      {/* <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 ">
                         <a 
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
@@ -52,7 +52,7 @@ const Navbar = () => {
                             {encyptionText("Our Projects")}
                         </a>
                     </div>
-                </div>
+                </div> */}
               
                 <div className="flex flex-row gap-4 items-center justify-between">
                 <a
@@ -60,7 +60,7 @@ const Navbar = () => {
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                          onMouseDown ={() => LanguageChangeHandler("ar")}
                          className="cursor-pointer text-white hover:text-purple-500">
-                            {languageType=="en"?"عربي":"english"}
+                            {encyptionText("lang")}
                         </a>
                     {Socials.map((social) => (
                         <a 
@@ -71,7 +71,8 @@ const Navbar = () => {
                            ? <span className="w-[20px] font-bold  text-gray-300">
                            {encyptionText("ooo")}
                             </span>
-                            :<Image
+                            :
+                            <img
                                 src={social.src}
                                 alt={social.name}
                                 width={24}

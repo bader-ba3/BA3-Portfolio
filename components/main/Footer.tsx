@@ -12,6 +12,7 @@ import {FaYoutube} from "react-icons/fa";
 import { MouseContext } from "@/context/mouse-context";
 import Spline from '@splinetool/react-spline';
 import  encyptionText  from "../../utils/encyptionText";
+import { LanguageContext } from "@/context/languageContext";
 
 const Footer = () => {
         const hasWindow = typeof window !== 'undefined';
@@ -28,9 +29,17 @@ const Footer = () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+    
     const { cursorType, cursorChangeHandler } = useContext(MouseContext);
+    const { languageType,LanguageChangeHandler } = useContext(LanguageContext);
+
       return (
         <div className="w-full h-full  flex-col text-gray-200 p-0 z-[20] items-center justify-center">
+            <div 
+               style={{direction:languageType=="ar"?"rtl":"ltr"}}
+              className="mb-[20px] text-[15px] text-center">
+                    {"Tap Here 👇🏻"}
+                </div>
             <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
@@ -42,10 +51,14 @@ const Footer = () => {
               <div className="mb-[70px] text-[15px] text-center">
                   
                 </div>
-              <div className="mb-[20px] text-[15px] text-center">
+              <div 
+               style={{direction:languageType=="ar"?"rtl":"ltr"}}
+              className="mb-[20px] text-[15px] text-center">
                     {encyptionText("Rights_Reserved")}
                 </div>
-                <div className="mb-[20px] text-[15px] text-center">
+                <div 
+                 style={{direction:languageType=="ar"?"rtl":"ltr"}}
+                className="mb-[20px] text-[15px] text-center">
                 {encyptionText("Made with")}
                 <span className="text-purple-500">
                     

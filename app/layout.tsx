@@ -1,4 +1,3 @@
-'use client';
 import  Home from "../app/page";
 
 import type {Metadata} from "next";
@@ -10,7 +9,7 @@ import Navbar from "@/components/main/Navbar";
 import MouseContextProvider from "../context/mouse-context";
 import EncryptionContextProvider from "../context/encryptContext";
 import LanguageContextProvider,{LanguageContext} from "../context/languageContext";
-import React,{useState,useEffect,useContext} from 'react';
+import React,{useState,useContext} from 'react';
 import Head from 'next/head';
 import Script from 'next/script'
 import HideOnTouchscreen from "@/components/HideOnTouchscreen";
@@ -22,21 +21,13 @@ import { createRoot } from 'react-dom/client';
 
 const inter = Inter({subsets: ["latin"]});
 
-// export const metadata: Metadata = {
-//     title: "BA3",
-//     description: "BA3 Portfolio",
-    
-// };
+export const metadata: Metadata = {
+    title: "BA3",
+    description: "BA3 Portfolio",
+};
 
 export default function RootLayout({children,}: {children: React.ReactNode;}) {
-    const hasWindow = typeof window !== 'undefined';
-    useEffect(() => {
-        window.addEventListener("resize", () => {
-          setSize(window.innerWidth)
-      });
-      });
 
-    const [size, setSize] = useState(hasWindow?window.innerWidth:500);
 
 // const someElement = document.getElementById('root')!;    
 // if(someElement) {
@@ -77,9 +68,8 @@ export default function RootLayout({children,}: {children: React.ReactNode;}) {
      
        <React.StrictMode>
        <EncryptionContextProvider>
-         <LanguageContextProvider>
-         
-         <MouseContextProvider>
+        <LanguageContextProvider>
+        <MouseContextProvider>
         <StarsCanvas/>
         <Navbar/> 
         {children}

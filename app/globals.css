@@ -12,6 +12,7 @@
 
  * {
      cursor: none !important; 
+     -webkit-appearance: none;
      /* font-family: "Redacted Script" */
      /* font-family: "Noto Sans Old South Arabian", sans-serif; */
      /* font-family: "Flow Rounded", system-ui; */
@@ -102,7 +103,7 @@
 
 .cursor {
     background-color: #ef000000;
-    height: 32px;
+    height: 42px;
     width: 32px;
     align-self: start;
     position: fixed;

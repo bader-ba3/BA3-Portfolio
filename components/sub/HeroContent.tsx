@@ -10,7 +10,6 @@ import {
 } from "@/utils/motion";
 import Spline from '@splinetool/react-spline';
 import {SparklesIcon} from "@heroicons/react/24/solid";
-import Image from "next/image";
 import { MouseContext } from "@/context/mouse-context";
 import { EncryptionContext } from "@/context/encryptContext";
 import  encyptionText  from "../../utils/encyptionText";
@@ -52,10 +51,10 @@ const HeroContent = () => {
        ?
         <motion.div
         style={{direction:languageType=="ar"?"rtl":"ltr"}}
-            initial="hidden"
+           
             animate="visible"
             // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-            className="h-full w-full flex flex-col   px-20  items-center justify-center  mt-20 w-full z-[40] xl:flex-row">
+            className="h-[80vh] w-full flex flex-col   px-20  items-center justify-center  mt-20 w-full z-[40] xl:flex-row">
                    {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
             
          
@@ -145,7 +144,7 @@ const HeroContent = () => {
 
         <motion.div
         style={{direction:languageType=="ar"?"rtl":"ltr"}}
-        initial="hidden"
+       
         animate="visible"
         // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
         className="h-full w-full flex flex-col   px-10  items-center justify-center  mt-20 w-full z-[20] ">

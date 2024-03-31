@@ -1,5 +1,10 @@
 export const Socials = [
     {
+        name: "whatsapp",
+        src: "/whatsapp.png",
+        link: "https://wa.me/+971509093400"
+    },
+    {
         name: "LinkedIn",
         src: "/linkedin.svg",
         link: "https://www.linkedin.com/company/ba3-co/"
@@ -19,15 +24,27 @@ export const Socials = [
         src: "/instagram.svg",
         link: "https://www.instagram.com/ba3.co/"
     },
-    //  {
-    //     name: "YouTube",
-    //     src: "/youtube.png",
-    //     link: "https://www.youtube.com/@ba3-co"
-    // }, {
-    //     name: "X",
-    //     src: "/x.png",
-    //     link: "https://twitter.com/ba3_co_"
-    // }
+     {
+        name: "YouTube",
+        src: "/youtube.png",
+        link: "https://www.youtube.com/@ba3-co"
+    }, {
+        name: "X",
+        src: "/x.png",
+        link: "https://twitter.com/ba3_co_"
+    }, {
+        name: "Snapchat",
+        src: "/snapchat.png",
+        link: "https://twitter.com/ba3_co_"
+    }, {
+        name: "Threds",
+        src: "/threds.png",
+        link: "https://www.threads.net/@ba3.co"
+    }, {
+        name: "Mail",
+        src: "/mail.png",
+        link: "mailto:hello@ba3.co"
+    }
 ];
 
 

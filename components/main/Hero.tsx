@@ -10,7 +10,7 @@ const Hero = () => {
     const { languageType,LanguageChangeHandler } = useContext(LanguageContext);
 
     return (
-        <div className="flex flex-col h-full w-full mt-0" id="about-us">
+        <div className="flex flex-col  w-full mt-0" id="about-us">
             <video
                 autoPlay
                 muted
