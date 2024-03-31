@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React,{useEffect,useState} from "react";
 import  encyptionText  from "../../utils/encyptionText";
 
 interface Props {
@@ -9,8 +9,22 @@ interface Props {
 }
 
 const ProjectCard = ({src, title, description}: Props) => {
+    const hasWindow = typeof window !== 'undefined';
+
+    const [width, setwidth] = useState(hasWindow?window.innerWidth:9);
+    useEffect(() => {
+        const handleResize = () => {
+          setwidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return (
-        <div className="relative w-[25%]  overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+        <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]"style={{width:width>780?"25%":"100%"}}>
             <Image
                 src={src}
                 alt={title}
