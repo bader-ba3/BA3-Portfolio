@@ -27,7 +27,7 @@ const Navbar = () => {
                         height={40}
                         className="cursor-pointer hover:animate-slowspin"
                     />
-                    <span className="w-[120px] font-bold ml-[10px] text-gray-300">
+                    <span className="w-[120px] font-bold ml-[10px] text-white">
                        {encyptionText("BA3")}
                     </span>
                 </a> 
@@ -60,7 +60,9 @@ const Navbar = () => {
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                          onMouseDown ={() => LanguageChangeHandler("ar")}
                          className="cursor-pointer text-white hover:text-purple-500">
-                            {encyptionText("lang")}
+                            <span className="w-[40px] font-bold ml-[10px] text-white">
+                       {isEncryption ?encyptionText("oooooo"):encyptionText("lang")}
+                    </span>
                         </a>
                     {Socials.map((social) => (
                         <a 
@@ -68,7 +70,7 @@ const Navbar = () => {
                         onMouseLeave={() => cursorChangeHandler("cursor")}
                         href={social.link} className="cursor-pointer px-[5px] " target="_blank" key={social.name}>
                            { isEncryption
-                           ? <span className="w-[20px] font-bold  text-gray-300">
+                           ? <span className="w-[20px] font-bold  text-white">
                            {encyptionText("ooo")}
                             </span>
                             :

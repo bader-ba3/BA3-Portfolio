@@ -11,7 +11,7 @@ const Projects = () => {
             <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10 z-[20]">
                 {encyptionText("Our Projects")}
             </h1>
-            <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+            <div className="h-full w-full  justify-center flex flex-col md:flex-row gap-10 px-10"style={{flex:1,flexDirection: 'row', flexWrap: 'wrap'}}>
                 <ProjectCard
                      src="/store_banner.jpeg"
                     title="BA3 Store"
@@ -32,12 +32,6 @@ const Projects = () => {
                     title="BA3 Chat"
                     description="Our chat app offers easy communication with voice and video calls. Stay connected, manage contacts, and enjoy privacy with encrypted messages. Download for seamless communication."
                 />
-               
-            </div>
-
-            <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
-
-            <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
                 <ProjectCard
                      src="/tiktok_banner.jpeg"
                     title="BA3 TikTok"
@@ -58,12 +52,7 @@ const Projects = () => {
                     title="BA3 Car"
                     description="Find your perfect car with ease on our platform. compare prices, and connect with sellers to negotiate and purchase your next vehicle hassle-free."
                 />
-            </div>
-
-            <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
-
-            <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
-            <ProjectCard
+                <ProjectCard
                      src="/clicn_banner.png"
                     title="BA3 Clinc"
                     description="Book appointments with ease using our app. Find doctors and Receive reminders and manage your health appointments conveniently."
@@ -85,6 +74,18 @@ const Projects = () => {
                     description="Book flights effortlessly with our airline booking app. Search for flights, compare prices, and reserve seats quickly. all in one place."
                 /> 
             </div>
+
+            {/* <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
+
+            <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+               
+            </div>
+
+            <h1 className="text-[20px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-5"></h1>
+
+            <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
+            
+            </div> */}
 
         </div>
     );
