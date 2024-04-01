@@ -27,7 +27,7 @@ const Navbar = () => {
                         height={40}
                         className="cursor-pointer hover:animate-slowspin"
                     />
-                    <span className="w-[120px] font-bold ml-[10px] text-white">
+                    <span className="w-[120px] font-bold ml-[10px] px-2 text-white"style={{fontSize:"22px"}}>
                        {encyptionText("BA3")}
                     </span>
                 </a> 
@@ -60,7 +60,7 @@ const Navbar = () => {
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                          onMouseDown ={() => LanguageChangeHandler("ar")}
                          className="cursor-pointer text-white hover:text-purple-500">
-                            <span className="w-[40px] font-bold ml-[10px] text-white">
+                            <span className="w-[40px] font-bold ml-[10px] text-white hover:text-purple-500">
                        {isEncryption ?encyptionText("oooooo"):encyptionText("lang")}
                     </span>
                         </a>
@@ -75,6 +75,7 @@ const Navbar = () => {
                             </span>
                             :
                             <img
+                                
                                 src={social.src}
                                 alt={social.name}
                                 width={24}
