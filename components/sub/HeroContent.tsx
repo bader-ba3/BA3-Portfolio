@@ -15,32 +15,26 @@ import { EncryptionContext } from "@/context/encryptContext";
 import encyptionText from "../../utils/encyptionText";
 import { LanguageContext } from "@/context/languageContext";
 import { useRef } from "react";
+var isLcked = false;
 
 const HeroContent = () => {
-  var isLcked = false;
   const { isEncryption, encryptionChangeHandler } =
     useContext(EncryptionContext);
-
   const { cursorType, cursorChangeHandler } = useContext(MouseContext);
   const { languageType, LanguageChangeHandler } = useContext(LanguageContext);
   // const isTouchscreen = useState(IsTouchscreen);
-  // function onMouseDown(e: { target: { name: string; }; }) {
-  //     isLcked=!isLcked
-  //     console.log("onMouseDown")
-  //     encryptionChangeHandler(isLcked)
-  //   }
+  function onMouseDown() {
+    isLcked = !isLcked;
+    console.log("onMouseDown");
+    console.log(isLcked);
+    encryptionChangeHandler(isLcked);
+  }
   const initialRef: any = null;
   const objectToAnimate = React.useRef(initialRef);
 
   function onLoad(spline) {
     const obj = spline.findObjectByName("abc");
     objectToAnimate.current = obj;
-  }
-
-  function triggerAnimation() {
-    objectToAnimate.current.emitEvent("mouseDown");
-    isLcked=!isLcked;
-    encryptionChangeHandler(isLcked);
   }
 
   const hasWindow = typeof window !== "undefined";
@@ -108,7 +102,7 @@ const HeroContent = () => {
           onMouseLeave={() => cursorChangeHandler("cursor")}
           className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]"
           // href="https://wa.me/+971562064458"
-          onMouseDown={triggerAnimation}
+          //   onMouseDown={triggerAnimation}
           target="_blank"
           variants={slideInFromLeft(1)}
         >
@@ -123,7 +117,6 @@ const HeroContent = () => {
         <motion.div
           variants={slideInFromRight(0.8)}
           className="w-[50%] h-[450px] z-[-100]  flex items-center justify-center"
-        //   className=" w-[50%] h-[500px]  z-[-100] px-20  flex items-center justify-center "
         >
           <Spline
             scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode"
@@ -131,27 +124,35 @@ const HeroContent = () => {
             onLoad={onLoad}
           />
         </motion.div>
-
-
-
-
-<div
- onMouseEnter={() => cursorChangeHandler("cursor-hover")}
- onMouseLeave={() => cursorChangeHandler("cursor")}
- onMouseDown={triggerAnimation}
-className = "w-[30%] items-center justify-center " style={{ position: 'relative'}}>
-        <div className = "w-[100%] z-[-100] items-center justify-center">
-          <img src ="/button.png" alt = "Freedom Blog" />
-        </div>
-          <div className="w-[100%] items-center justify-center" style={{position: 'absolute',right: '70%',left: '30%',bottom: '60%',top:"40%"}}>
-          <p className="text-white text-2xl font-bold">Overlay Text</p>
+        <a
+          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+          onMouseLeave={() => cursorChangeHandler("cursor")}
+          onMouseDown={onMouseDown}
+          className="w-[25%] items-center justify-center "
+          style={{ position: "relative" }}
+        >
+          <div className="w-[100%] z-[-100] items-center justify-center">
+            <img src="/button.png" alt="Freedom Blog" />
           </div>
-      </div>
-      
-
-
-
-
+          <div
+            className="w-[100%]  items-center justify-center"
+            style={{
+              position: "absolute",
+                textAlign:"center",
+                top:"35%"
+            }}
+          >
+            <p className="text-white text-2xl font-bold items-center justify-center "style={{fontFamily:"Arial"}}>{
+                isEncryption
+                ?languageType=="en"
+                    ?"Decrypt Data"
+                    :"إلغاء تشفير البيانات"
+                :languageType=="en"
+                    ?"Encrypt data"
+                    :"تشفير البيانات"
+            }</p>
+          </div>
+        </a>
       </div>
 
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
@@ -215,7 +216,7 @@ className = "w-[30%] items-center justify-center " style={{ position: 'relative'
           onMouseLeave={() => cursorChangeHandler("cursor")}
           className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]"
           // href="https://wa.me/+971562064458"
-          onMouseDown={triggerAnimation}
+          //   onMouseDown={triggerAnimation}
           target="_blank"
           variants={slideInFromLeft(1)}
         >
