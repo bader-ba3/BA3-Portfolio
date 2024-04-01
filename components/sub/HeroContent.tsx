@@ -24,9 +24,9 @@ const HeroContent = () => {
   const { languageType, LanguageChangeHandler } = useContext(LanguageContext);
   // const isTouchscreen = useState(IsTouchscreen);
   function onMouseDown() {
+    objectToAnimate.current.emitEvent('mouseDown');
     isLcked = !isLcked;
-    console.log("onMouseDown");
-    console.log(isLcked);
+   
     encryptionChangeHandler(isLcked);
   }
   const initialRef: any = null;
@@ -113,10 +113,10 @@ const HeroContent = () => {
       <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
       <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
 
-      <div className="h-full w-full flex flex-col items-center justify-center gap-10 ">
+      <div className=" h-[450px] flex flex-col items-center justify-center gap-10 " >
         <motion.div
           variants={slideInFromRight(0.8)}
-          className="w-[50%] h-[450px] z-[-100]  flex items-center justify-center"
+          className=" h-[450px] z-[-100]  flex items-center justify-center"
         >
           <Spline
             scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode"
@@ -128,14 +128,14 @@ const HeroContent = () => {
           onMouseEnter={() => cursorChangeHandler("cursor-hover")}
           onMouseLeave={() => cursorChangeHandler("cursor")}
           onMouseDown={onMouseDown}
-          className="w-[25%] items-center justify-center "
+          className="w-[300px] items-center justify-center "
           style={{ position: "relative" }}
         >
           <div className="w-[100%] z-[-100] items-center justify-center">
             <img src="/button.png" alt="Freedom Blog" />
           </div>
           <div
-            className="w-[100%]  items-center justify-center"
+            className="w-[300px] items-center justify-center "
             style={{
               position: "absolute",
                 textAlign:"center",
@@ -146,7 +146,7 @@ const HeroContent = () => {
                 isEncryption
                 ?languageType=="en"
                     ?"Decrypt Data"
-                    :"إلغاء تشفير البيانات"
+                    :"فك تشفير البيانات"
                 :languageType=="en"
                     ?"Encrypt data"
                     :"تشفير البيانات"
@@ -167,19 +167,62 @@ const HeroContent = () => {
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
 
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
-      <motion.div
+      {/* <motion.div
         variants={slideInFromRight(0.8)}
         className=" w-[500px] h-[500px] z-[-1]  "
         style={{ scale: 1, overflow: "auto" }}
       >
-        {/* <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}}  */}
+        <Spline scene="https://prod.spline.design/oKGmfKZpMBGwEBd9/scene.splinecode" style={{scale :"1.4"}} 
         <Spline
           scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode"
           //  onMouseDown={onMouseDown}
           onLoad={onLoad}
         />
-      </motion.div>
-      <div className="h-full w-[100%] flex flex-col py-0 px-0 justify-center gap-5    z-[20]">
+       
+      </motion.div> */}
+      <div className="h-full w-full flex flex-col items-center justify-center gap-10 ">
+        <motion.div
+          variants={slideInFromRight(0.8)}
+          className="w-[500px] h-[400px] z-[-1]  flex items-center justify-center"
+        >
+          <Spline
+            scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode"
+        
+            onLoad={onLoad}
+          />
+        </motion.div>
+        <a
+          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+          onMouseLeave={() => cursorChangeHandler("cursor")}
+          onMouseDown={onMouseDown}
+          className="w-[300px] items-center justify-center "
+          style={{ position: "relative" }}
+        >
+          <div className="w-[100%] z-[-100] items-center justify-center">
+            <img src="/button.png" alt="Freedom Blog" />
+          </div>
+          <div
+            className="w-[100%]  items-center justify-center"
+            style={{
+              position: "absolute",
+                textAlign:"center",
+                top:"35%"
+            }}
+          >
+            <p className="text-white text-2xl font-bold items-center justify-center "style={{fontFamily:"Arial"}}>{
+                isEncryption
+                ?languageType=="en"
+                    ?"Decrypt Data"
+                    :"فك تشفير البيانات"
+                :languageType=="en"
+                    ?"Encrypt data"
+                    :"تشفير البيانات"
+            }</p>
+          </div>
+        </a>
+        
+      </div>
+      <div className="h-full w-[100%] flex flex-col py-20 px-0 justify-center gap-5    z-[20]">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px]  border border-[#7042f88b] opacity-[0.9]"
