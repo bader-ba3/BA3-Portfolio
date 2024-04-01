@@ -37,6 +37,19 @@ const Navbar = () => {
             document.removeEventListener("click",hundler);
          }
     })
+
+    const [width, setwidth] = useState(hasWindow ? window.innerWidth : 9);
+  useEffect(() => {
+    const handleResize = () => {
+      setwidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
@@ -59,7 +72,8 @@ const Navbar = () => {
           </span>
         </a>
 
-        <div className=" relative flex flex-col item-center z-[100] w-[200px] right-[3px] hover:text-purple-600" ref={menuRef}>
+        {width <900 
+        ?<div className=" relative flex flex-col item-center z-[100] w-[200px] right-[3px] hover:text-purple-600" ref={menuRef}>
           <button
             onClick={() => 
                 
@@ -105,6 +119,29 @@ const Navbar = () => {
             </div>
           )}
         </div>
+        :   <div className="relative flex flex-row item-center justify-center z-[100]  gap-5 ">
+            {Socials.map((social) => (
+            <a 
+            onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+            onMouseLeave={() => cursorChangeHandler("cursor")}
+            href={social.link} 
+            className="cursor-pointer px-[5px] item-center justify-center" 
+            target="_blank" key={social.name}>
+               { isEncryption
+               ? <span className="w-[20px] font-bold  text-white ">
+               {encyptionText("ooo")}
+                </span>
+                :
+                <img
+                    src={social.src}
+                    alt={social.name}
+                    width={24}
+                    height={24}
+                    style={{ cursor: "pointer" }}
+                />}
+            </a>
+        ))}
+        </div> }
 
         {/* <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 ">
@@ -129,26 +166,7 @@ const Navbar = () => {
                     </div>
                 </div> */}
 
-        {/* {Socials.map((social) => (
-                        <a 
-                        onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-                        onMouseLeave={() => cursorChangeHandler("cursor")}
-                        href={social.link} className="cursor-pointer px-[5px] " target="_blank" key={social.name}>
-                           { isEncryption
-                           ? <span className="w-[20px] font-bold  text-white">
-                           {encyptionText("ooo")}
-                            </span>
-                            :
-                            <img
-                                
-                                src={social.src}
-                                alt={social.name}
-                                width={24}
-                                height={24}
-                                style={{ cursor: "pointer" }}
-                            />}
-                        </a>
-                    ))} */}
+       
       </div>
     </div>
   );

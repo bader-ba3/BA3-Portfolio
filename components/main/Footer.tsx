@@ -35,11 +35,11 @@ const Footer = () => {
 
       return (
         <div className="w-full h-full  flex-col text-gray-200 p-0 z-[20] items-center justify-center">
-            <div 
+            {/* <div 
                style={{direction:languageType=="ar"?"rtl":"ltr"}}
               className="mb-[20px] text-[15px] text-center">
                     {"Tap Here 👇🏻"}
-                </div>
+                </div> */}
             <div 
                onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                onMouseLeave={() => cursorChangeHandler("cursor")}
@@ -47,7 +47,7 @@ const Footer = () => {
               <Spline  scene="https://prod.spline.design/QoPV-qbZbW4VHHcN/scene.splinecode"  style={{overflow:'auto'}}/>
               </div>
             
-              <span className="text-[12px] ml-[6px]">{size}</span>
+              <span className="text-[0px] ml-[6px]">{size}</span>
               <div className="mb-[70px] text-[15px] text-center">
                   
                 </div>
