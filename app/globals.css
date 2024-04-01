@@ -20,12 +20,12 @@
      /* font-family: "Varela Round", sans-serif; */
     
    }  
- /* :root{
-    font-family: "Varela Round";
+ :root{
+    /* font-family: "Varela Round"; */
+    font-family: "Flow Rounded";
 
 
-
- } */
+ }
 .cursive {
     /* font-family: "Cedarville Cursive", cursive; */
     /* font-family: "Noto Sans Old South Arabian", sans-serif; */

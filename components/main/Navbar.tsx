@@ -69,6 +69,7 @@ const Navbar = () => {
             style={{ fontSize: "22px" }}
           >
             {encyptionText("BA3")}
+            
           </span>
         </a>
 

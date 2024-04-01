@@ -1,6 +1,7 @@
 "use client"
 import React, { createContext, useState,useContext } from "react";
 import { EncryptionContext } from "@/context/encryptContext";
+import { useIntl } from 'react-intl';
 
 export const LanguageContext = createContext({
   languageType: "en",
@@ -11,10 +12,17 @@ export const LanguageContext = createContext({
 
 const LanguageContextProvider = (props: { children: any }) => {
 
-  // console.log( window.navigator.language);
-  const [languageType, setLanguageType] = useState("en");
+  console.log( window.navigator.language);
+  console.log( window.navigator.language);
+  console.log( window.navigator.language);
+  var defaultLang ="en"
+  if(window.navigator.language.toLocaleLowerCase().includes("ar")){
+    defaultLang="ar"
+  }
+  const [languageType, setLanguageType] = useState(defaultLang);
+  
   const { isEncryption, encryptionChangeHandler } = useContext(EncryptionContext);
-
+  
   const LanguageChangeHandler = () => {
     console.log("isEncryption "+isEncryption)
     console.log("languageType "+languageType)

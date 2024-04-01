@@ -3,14 +3,14 @@ import React, { createContext, useState,useContext } from "react";
 import { LanguageContext } from "@/context/languageContext";
 
 export const EncryptionContext = createContext({
-  isEncryption: false,
+  isEncryption: true,
   encryptionChangeHandler: (_: any) => {
     console.log(_);
   },
 });
 
 const EncryptionContextProvider = (props: { children: any }) => {
-  const [isEncryption, setEncryptionType] = useState(false);
+  const [isEncryption, setEncryptionType] = useState(true);
   const {languageType,LanguageChangeHandler} = useContext(LanguageContext);
 
   const encryptionChangeHandler = (_isEncryption: React.SetStateAction<boolean>) => {

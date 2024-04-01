@@ -15,7 +15,7 @@ import { EncryptionContext } from "@/context/encryptContext";
 import encyptionText from "../../utils/encyptionText";
 import { LanguageContext } from "@/context/languageContext";
 import { useRef } from "react";
-var isLcked = false;
+var isLcked = true;
 
 const HeroContent = () => {
   const { isEncryption, encryptionChangeHandler } =

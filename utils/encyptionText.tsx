@@ -70,7 +70,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         "Performance":"الاداء",
         "&":"و",
         "Security":"الحماية",
-        "Hardened security":"اقوىىىىىىىى حماية",
+        "Hardened security":"اقوى طرق الحماية ",
         "encrypt_des":"بيانات تطبيق محمية بتشفير الطرف للطرف لايمكن لأحد ان يقرأها",
         "(not even us).":"(ولا حتى نحن)",
         "Rights_Reserved":"© حقوق الطبع والنشر 2024، جميع الحقوق محفوظة.",
