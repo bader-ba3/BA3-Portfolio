@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <div
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
-      className="w-[100vw] h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10"
+      className="w-[100vw] h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-4"
     >
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px] z-[-10]">
         <a className="h-auto w-auto flex flex-row items-center z-[-10]">
@@ -74,16 +74,22 @@ const Navbar = () => {
 
         {width <900 
         ?
-        (<div className="flex flex-row gap-4 items-center justify-between">
+        (<div className="flex flex-row gap-3 items-center justify-center "
+        style={{textAlign:"end"}}>
             <a
                          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
                          onMouseLeave={() => cursorChangeHandler("cursor")}
                          onMouseDown ={() => LanguageChangeHandler("ar")}
-                         className="cursor-pointer text-white hover:text-purple-500">
-                           
-                            {encyptionText("lang")}
+                         className="cursor-pointer items-center justify-center text-white ">
+                           {isEncryption
+                           ? <span className="w-[20px] font-bold  text-white ">
+                           {encyptionText("ooo")}
+                            </span>
+                            :(<img src="earth.png"  
+                           width={30}
+                    height={30} alt="abc" />)}
                         </a>
-        <div className=" relative flex flex-col item-center z-[100] w-[150px]  " ref={menuRef}>
+        <div className=" relative flex flex-col item-center z-[100] w-auto  " ref={menuRef}>
           <button
             onClick={() => 
                 
@@ -133,14 +139,25 @@ const Navbar = () => {
         </div>
          </div> )      
         :  
-       ( <div className="flex flex-row gap-4 items-center justify-between">
+       ( 
+       <div className="flex flex-row gap-5 items-center justify-center">
+
         <a
-                     onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-                     onMouseLeave={() => cursorChangeHandler("cursor")}
-                     onMouseDown ={() => LanguageChangeHandler("ar")}
-                     className="cursor-pointer text-white hover:text-purple-500">
-                        {encyptionText("lang")}
-                    </a> 
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                         onMouseDown ={() => LanguageChangeHandler("ar")}
+                         className="cursor-pointer items-center justify-center text-white ">
+
+                        {isEncryption
+                         ? <span className="w-[20px] font-bold  text-white ">
+                         {encyptionText("ooo")}
+                          </span>
+                          :
+                        (   <img src="earth.png"  
+                           width={30}
+                    height={30} alt="a" />)}
+                        </a>
+
         <div className="relative flex flex-row item-center justify-center z-[100]  gap-5 ">
             {Socials.map((social) => (
             <a 
