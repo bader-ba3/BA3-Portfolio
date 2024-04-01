@@ -31,7 +31,7 @@ const ProjectCard = ({ src, title, description }: Props) => {
     useContext(EncryptionContext);
 
   return (
-    <div className="w-[70%] relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]">
+    <div className=" relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61]" style={{width:width>750?"70%":"100%" }}>
       {/* <img
                 src={src}
                 alt={title}

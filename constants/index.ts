@@ -35,9 +35,9 @@ export const Socials = [
     }, {
         name: "Snapchat",
         src: "/snapchat.png",
-        link: "https://twitter.com/ba3_co_"
+        link: "https://t.snapchat.com/e6Ma59j5"
     }, {
-        name: "Threds",
+        name: "Threads",
         src: "/threds.png",
         link: "https://www.threads.net/@ba3.co"
     }, {
