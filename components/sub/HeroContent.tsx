@@ -98,17 +98,7 @@ const HeroContent = () => {
           {encyptionText("addad")}
         </motion.p>
 
-        <motion.a
-          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-          onMouseLeave={() => cursorChangeHandler("cursor")}
-          className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]"
-          // href="https://wa.me/+971562064458"
-          //   onMouseDown={triggerAnimation}
-          target="_blank"
-          variants={slideInFromLeft(1)}
-        >
-          {encyptionText("Diving in our Space!")}
-        </motion.a>
+     
       </motion.div>
 
       <motion.div className=" w-[5%] h-[5px]  z-[20] flex items-center justify-center "></motion.div>
@@ -257,17 +247,7 @@ const HeroContent = () => {
           {encyptionText("addad")}
         </motion.p>
 
-        <motion.a
-          onMouseEnter={() => cursorChangeHandler("cursor-hover")}
-          onMouseLeave={() => cursorChangeHandler("cursor")}
-          className="py-2 button-primary text-center text-white rounded-lg max-w-[200px]"
-          // href="https://wa.me/+971562064458"
-          //   onMouseDown={triggerAnimation}
-          target="_blank"
-          variants={slideInFromLeft(1)}
-        >
-          {encyptionText("Diving in our Space!")}
-        </motion.a>
+       
       </div>
 
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}

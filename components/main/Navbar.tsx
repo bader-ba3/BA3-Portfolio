@@ -73,13 +73,23 @@ const Navbar = () => {
         </a>
 
         {width <900 
-        ?<div className=" relative flex flex-col item-center z-[100] w-[150px]  " ref={menuRef}>
+        ?
+        (<div className="flex flex-row gap-4 items-center justify-between">
+            <a
+                         onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                         onMouseLeave={() => cursorChangeHandler("cursor")}
+                         onMouseDown ={() => LanguageChangeHandler("ar")}
+                         className="cursor-pointer text-white hover:text-purple-500">
+                           
+                            {encyptionText("lang")}
+                        </a>
+        <div className=" relative flex flex-col item-center z-[100] w-[150px]  " ref={menuRef}>
           <button
             onClick={() => 
                 
                 setIsOpen((prev) => !prev)
                 }
-            className=" w-full z-[100]  flex items-center justify-center text-white tracking-wider rounded-lg active:border-white active:text-white hover:text-purple-600"
+            className=" w-full z-[100]  flex items-center justify-center text-white tracking-wider rounded-lg active:border-white active:text-white "
           >
             
             {encyptionText("Contact us")}
@@ -99,6 +109,7 @@ const Navbar = () => {
                   "linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.2))",
               }}
             >
+                
               {Socials.map((item, i) => (
                 <a
                 //   onClick={() => setIsOpen(false)}
@@ -120,7 +131,17 @@ const Navbar = () => {
             </div>
           )}
         </div>
-        :   <div className="relative flex flex-row item-center justify-center z-[100]  gap-5 ">
+         </div> )      
+        :  
+       ( <div className="flex flex-row gap-4 items-center justify-between">
+        <a
+                     onMouseEnter={() => cursorChangeHandler("cursor-hover")}
+                     onMouseLeave={() => cursorChangeHandler("cursor")}
+                     onMouseDown ={() => LanguageChangeHandler("ar")}
+                     className="cursor-pointer text-white hover:text-purple-500">
+                        {encyptionText("lang")}
+                    </a> 
+        <div className="relative flex flex-row item-center justify-center z-[100]  gap-5 ">
             {Socials.map((social) => (
             <a 
             onMouseEnter={() => cursorChangeHandler("cursor-hover")}
@@ -142,7 +163,9 @@ const Navbar = () => {
                 />}
             </a>
         ))}
-        </div> }
+        </div>
+        </div>)
+         }
 
         {/* <div className="hidden md:w-[500px] md:flex md:flex-row md:items-center md:justify-between md:mr-20">
                     <div className="flex items-center justify-between w-full h-auto border border-[#7042f861] bg-[#0300145e] mr-[15px] px-[20px] py-[10px] rounded-full text-gray-200 ">
