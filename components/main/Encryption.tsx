@@ -10,7 +10,7 @@ const Encryption = () => {
     return (
         <div 
         id="encryption"
-        className="flex flex-col relative items-center justify-center  w-full h-[100vh]">
+        className=" flex flex-col relative items-center justify-center  w-full h-[100vh]">
             
            
         

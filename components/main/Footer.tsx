@@ -34,7 +34,7 @@ const Footer = () => {
     const { languageType,LanguageChangeHandler } = useContext(LanguageContext);
 
       return (
-        <div className="w-full h-full  flex-col text-gray-200 p-0 z-[20] items-center justify-center">
+        <div className=" w-full h-full  flex-col text-gray-200 p-0 z-[20] items-center justify-center">
             {/* <div 
                style={{direction:languageType=="ar"?"rtl":"ltr"}}
               className="mb-[20px] text-[15px] text-center">

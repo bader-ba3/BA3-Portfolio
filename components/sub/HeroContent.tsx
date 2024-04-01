@@ -163,7 +163,7 @@ const HeroContent = () => {
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
       animate="visible"
       // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-      className="h-full w-full flex flex-col   px-10  items-center justify-center  mt-20 w-full z-[20] "
+      className=" h-full w-[100vw] flex flex-col   px-10  items-center justify-center  mt-20 w-full z-[20] "
     >
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
 
@@ -181,10 +181,11 @@ const HeroContent = () => {
         />
        
       </motion.div> */}
-      <div className="h-full w-full flex flex-col items-center justify-center gap-10 ">
+      <div className="  h-full w-[100vw] flex flex-col items-center justify-center gap-10 "style={{overflow:"hidden"}}>
         <motion.div
           variants={slideInFromRight(0.8)}
-          className="w-[500px] h-[400px] z-[-1]  flex items-center justify-center"
+          className=" w-[450px] h-[400px] z-[-1]  flex items-center justify-center"
+         
         >
           <Spline
             scene="https://prod.spline.design/1wZ9HaYRCqaHjsQ2/scene.splinecode"
@@ -236,7 +237,8 @@ const HeroContent = () => {
 
         <motion.div
           variants={slideInFromLeft(0.5)}
-          className="flex flex-col gap-6 mt-6 text-6xl justify-center font-bold text-white max-w-[600px] w-auto h-auto"
+          className="flex flex-col gap-6 mt-6  justify-center font-bold text-white w-full h-auto"
+          style={{fontSize:width>750?"60px":"45px"}}
         >
           <span className="">
             {encyptionText("Providing")}

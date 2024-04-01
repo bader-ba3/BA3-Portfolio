@@ -33,7 +33,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         "by BA3.co":"by BA3.co",
         "Encryption":"Encryption",
         "lang":"عربي",
-        
+        "Contact us":"Contact us",
         "BA3 Store": "Our mobile e-commerce app offers a seamless shopping experience with a wide range of products, secure payments, convenient delivery options, and exclusive deals and discounts.",
         "BA3 Business Solution": "Streamline your store management with our solution. Track inventory, manage sales, and analyze performance. Improve customer service with efficient operations and data-driven insights.",
         "BA3 Restaurant": "Discover, explore, and order from a variety of cuisines with our restaurant app. Enjoy features like reviews, ratings, and easy online ordering for a delightful dining experience.",
@@ -79,7 +79,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         "by BA3.co":"بواسطة BA3.co",
         "Encryption":"الحماية",
         "lang":"English",
-      
+        "Contact us":"تواصل معنا",
 
         "BA3 Store": "تطبيقنا للتجارة الإلكترونية عبر الهاتف المحمول يقدم تجربة تسوق سلسة مع مجموعة واسعة من المنتجات والمدفوعات الآمنة وخيارات التوصيل المريحة وصفقات حصرية وخصومات.",
         "BA3 Business Solution": "قم بتبسيط إدارة متجرك مع حلولنا. تتبع المخزون وإدارة المبيعات وتحليل الأداء. تحسين خدمة العملاء مع العمليات الفعالة والرؤى التي تعتمد على البيانات.",

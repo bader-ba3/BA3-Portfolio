@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <div
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
-      className="w-full h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10"
+      className="w-[100vw] h-[65px] fixed top-0 shadow-lg bg-[#03001417] backdrop-blur-md z-50 px-10"
     >
       <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px] z-[-10]">
         <a className="h-auto w-auto flex flex-row items-center z-[-10]">
@@ -73,7 +73,7 @@ const Navbar = () => {
         </a>
 
         {width <900 
-        ?<div className=" relative flex flex-col item-center z-[100] w-[200px] right-[3px] hover:text-purple-600" ref={menuRef}>
+        ?<div className=" relative flex flex-col item-center z-[100] w-[150px]  " ref={menuRef}>
           <button
             onClick={() => 
                 
@@ -81,7 +81,8 @@ const Navbar = () => {
                 }
             className=" w-full z-[100]  flex items-center justify-center text-white tracking-wider rounded-lg active:border-white active:text-white hover:text-purple-600"
           >
-            {"Contact us"}
+            
+            {encyptionText("Contact us")}
             
             {!isOpen ? (
               <AiOutlineCaretDown className="h-8" />
