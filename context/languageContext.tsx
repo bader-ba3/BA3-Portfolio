@@ -12,11 +12,10 @@ export const LanguageContext = createContext({
 
 const LanguageContextProvider = (props: { children: any }) => {
 
-  console.log( window.navigator.language);
-  console.log( window.navigator.language);
-  console.log( window.navigator.language);
+  const hasWindow = typeof window !== "undefined";
+
   var defaultLang ="en"
-  if(window.navigator.language.toLocaleLowerCase().includes("ar")){
+  if(hasWindow&&window.navigator.language.toLocaleLowerCase().includes("ar")){
     defaultLang="ar"
   }
   const [languageType, setLanguageType] = useState(defaultLang);

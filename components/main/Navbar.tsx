@@ -84,7 +84,7 @@ const Navbar = () => {
                          className="cursor-pointer items-center justify-center text-white ">
                            {isEncryption
                            ? <span className="w-[20px] font-bold  text-white ">
-                           {encyptionText("ooo")}
+                           {encyptionText("oooooo")}
                             </span>
                             :(<img src="earth.png"  
                            width={30}
@@ -151,7 +151,7 @@ const Navbar = () => {
 
                         {isEncryption
                          ? <span className="w-[20px] font-bold  text-white ">
-                         {encyptionText("ooo")}
+                         {encyptionText("oooooo")}
                           </span>
                           :
                         (   <img src="earth.png"  
