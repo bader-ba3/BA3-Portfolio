@@ -60,11 +60,11 @@ const HeroContent = () => {
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
       animate="visible"
       // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-      className="h-[80vh] w-[90vw] flex flex-col     items-center justify-center  mt-20 w-full z-[40] xl:flex-row"
+      className="h-[80vh] w-[100vw] flex flex-col     items-center   mt-20  z-[40] xl:flex-row"
     >
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
 
-      <motion.div className="h-full w-[50%] flex flex-col px-10  justify-center gap-5 m-auto text-start  z-[20]">
+      <motion.div className="h-full w-[50%] flex flex-col px-10  justify-center gap-5  text-start  z-[20]">
         <motion.div
           variants={slideInFromTop}
           className="Welcome-box py-[8px] px-[7px]  border border-[#7042f88b] opacity-[0.9]"
@@ -153,7 +153,7 @@ const HeroContent = () => {
       style={{ direction: languageType == "ar" ? "rtl" : "ltr" }}
       animate="visible"
       // className="flex flex-row items-center justify-center px-20 mt-40 w-full z-[20] mt-36">
-      className=" h-full w-[100vw] flex flex-col   px-10  items-center justify-center  mt-20 w-full z-[20] "
+      className=" h-full w-[100vw] flex flex-col  px-10  items-center justify-center  mt-20 w-full z-[20] "
     >
       {/* <motion.div variants={slideInFromRight(0.8)}className=" w-[20%] h-[5px]  z-[20] flex items-center justify-center "></motion.div> */}
 
