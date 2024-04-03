@@ -109,7 +109,7 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
         if( text[i] ==" "){
             _ +=" "
         }else{
-            _ +="a"
+            _ +="A"
         }
        }
         return _
@@ -120,7 +120,9 @@ const  encryptionText =(text: string,options?: { withTranslate?: boolean })=>{
     return options?.withTranslate!=null &&options?.withTranslate==false
         ?text
         :languageType =="en"
-            ?en[text]
+            ?isEncryption
+            ?encrypt(en[text])
+            :en[text]
             :isEncryption
             ?encrypt(ar[text])
             :ar[text]

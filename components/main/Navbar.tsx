@@ -109,7 +109,7 @@ const Navbar = () => {
           </button>
           {isOpen && (
             <div
-              className="  absolute top-10 flex flex-col item-start rounded-lg p-2 w-full  gap-5"
+              className="  absolute top-10 flex flex-col item-start rounded-lg p-2 w-[500px]  gap-5"
               style={{
                 backdropFilter: "blur(100px)",
                 backgroundImage:

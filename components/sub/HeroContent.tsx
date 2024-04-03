@@ -207,7 +207,7 @@ const HeroContent = () => {
                     ?"Decrypt Data"
                     :"فك تشفير البيانات"
                 :languageType=="en"
-                    ?"Encrypt data"
+                    ?"Encrypt Data"
                     :"تشفير البيانات"
             }</p>
           </div>
